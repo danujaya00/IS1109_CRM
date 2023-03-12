@@ -15,7 +15,7 @@
         <h5>The biggest pizza shop in Colombo</h5>
         <br><br>
         <div>
-          <input type=button onClick="parent.location='./login.php'" class="homebutton" value='Staff Login'>
+          <input type=button onClick="parent.location='./loginStaff.php'" class="homebutton" value='Staff Login'>
           <br /><br />
           <input type=button onClick="parent.location='./'" class="homebutton" style="background-color: gray;" value='Customer Login'>
           </div>

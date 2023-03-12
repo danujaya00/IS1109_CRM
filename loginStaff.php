@@ -76,7 +76,7 @@
 <body>
     <div class="container" id="container">
         <div class="form-container log-in-container">
-            <form action="index.php" method="post">
+            <form action="loginStaff.php" method="post">
                 <!-- <span style=""> -->
                     <h1>Login</h1>
                 <!-- </span> -->
