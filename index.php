@@ -5,7 +5,8 @@
 <?php 
 
 	// check for form submission
-	if (isset($_POST['submit'])) {
+	if (isset($_POST['logIn'])) {
+		
 		$errors = array();
 
 		// to check username and password are present in the form
@@ -24,9 +25,10 @@
 			$password 	= mysqli_real_escape_string($connection, $_POST['password']);
 			$enc_password = sha1($password);
 
+		
             //query to check if the user is in the database
 			$query = "SELECT * FROM crm_users 
-						WHERE email = '{$username}' 
+						WHERE email = '{$email}' 
 						AND password = '{$enc_password}' 
 						LIMIT 1";
 
@@ -35,6 +37,7 @@
 			verify_query($result_set);
 
 			if (mysqli_num_rows($result_set) == 1) {
+				
 				// user found
 				$user = mysqli_fetch_assoc($result_set);
 				$_SESSION['id'] = $user['id'];
@@ -50,6 +53,7 @@
 				verify_query($result_set);
 
 				// redirect to admin.php
+				echo "hamba una";
 				header('Location: admin.php');
                 
 			} else {
@@ -79,8 +83,9 @@
                 <span>or use your account</span>
                 <br><br>
                 <?php 
-					if (isset($errors) && !empty($errors)) {
+					if (isset($errors)) {
 						echo '<p class="error">Invalid Username / Password</p>';
+						
 					}
 				?>
 
@@ -90,7 +95,7 @@
 					}
 				?>
                 <input type="text" name="username" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+                <input type="password" name ="password" placeholder="Password" />
                 <br>
                 <button type="submit" name="logIn">Log In</button>
             </form>

@@ -12,7 +12,8 @@
 	function check_req_fields($req_fields) {
 		$errors = array();		
 		foreach ($req_fields as $field) {
-			if (empty(trim($_POST[$field]))) {
+			$trimVal = trim($_POST[$field]);
+			if (empty($trimVal)) {
 				$errors[] = $field . ' is required';
 			}
 		}
