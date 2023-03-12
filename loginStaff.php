@@ -53,7 +53,6 @@
 				verify_query($result_set);
 
 				// redirect to admin.php
-				echo "hamba una";
 				header('Location: admin.php');
                 
 			} else {
