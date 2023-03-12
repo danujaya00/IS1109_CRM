@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
+
+/*form */
+.formbox {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color:#332940; 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+    border-radius: 10px;
+  }
+
+
+.formbox-content {
+    color:#999999;
+    background-color: #332940;
+    margin: 5% auto 15% auto; 
+    border: 0px solid #888;
+    width: 50%; 
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+
+
+  .formbox-title{
+
+    font-family: 'Inter', sans-serif;
+
+
+    font-size: 32px;
+    color: #FFFFFF;
+
+    position: relative;
+    top:50px;
+    left:35px;
+
+
+
+
+}
+
+.table-dec{
+    padding-top: 30px;
+
+   padding-left:125px;
+
+   font-family: 'Inter', sans-serif;
+    
+    font-size: 24px;
+    
+
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+/*input*/ 
+
+input[type="text"], input[type="password"] {
+    display: inline-block;
+    width: 120%;
+   height:120%;
+    margin-right: 10%;
+    font-size: 16px;
+    line-height: 24px;
+    vertical-align: middle;
+}
+
+input[type="password"]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: transparent;
+}
+
+
+
+/* form add button */
+
+.form-button{
+    appearance: none;
+    background-color: #4044ED;
+    border: 0px solid #1A1A1A;
+    border-radius: 0px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+    width: 250%;
+  height: 45px;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    will-change: transform;
+  
+    position: relative;
+    top:20px;
+
+   
+  }
+  
+  .form-button:disabled {
+    pointer-events: none;
+  }
+  
+  .form-button:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .form-button:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+  /*cross close */
+
+  .close{
+    position: relative;
+    top:30px;
+    left:90%;
+  }
+
+  .close-image{
+    width: 10%;
+    height: auto;
+  }
+
+  .close:hover {
+    transform: translateY(-1px);
+  }
+
+
+  /* line for from tite */
+
+  .line-dec{
+    width: 175px;
+    position: relative;
+    top:55px;
+    left:35px;
+    border: 3px solid #4044ED;
+  }
+
+
+  /* animation */
+
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+
+  .animate {
+    -webkit-animation: animatezoom 0.4s;
+    animation: animatezoom 0.4s
+  }
