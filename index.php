@@ -17,7 +17,7 @@
         <div>
           <input type=button onClick="parent.location='./loginStaff.php'" class="homebutton" value='Staff Login'>
           <br /><br />
-          <input type=button onClick="parent.location='./'" class="homebutton" style="background-color: gray;" value='Customer Login'>
+          <input type=button onClick="parent.location='./customerLogin.php'" class="homebutton" style="background-color: gray;" value='Customer'>
           </div>
       </form>
     </div>
