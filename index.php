@@ -68,9 +68,9 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="./styles/loginstyles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <title>PiZzA</title>
+    <link rel="stylesheet" href="./styles/loginstyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Login</title>
 </head>
 
 <body>
@@ -108,14 +108,7 @@
             </div>
         </div>
     </div>
-    <div class="overlay-container">
-      <div class="overlay">
-        <div class="overlay-panel overlay-right">
-          <img src="./assets/login/pizaza.png" style="size: 300" />
-        </div>
-      </div>
-    </div>
-  </div>
 </body>
 
 </html>
+<?php mysqli_close($connection); ?>
