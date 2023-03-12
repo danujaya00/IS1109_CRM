@@ -71,26 +71,30 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/customerstyles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body>
 
     <div class="wrapper">
+        <a style="background-color: white; " href="./index.php"><i style="font-size:xxx-large; background-color:white;   " class="material-icons">keyboard_backspace</i></a>
+
         <h1>Register Yourself
         </h1>
         <?php
 
-		if (!empty($errors)) {
-			display_errors($errors);
-		}
+        if (!empty($errors)) {
+            display_errors($errors);
+        }
 
-		?>
+        ?>
         <form action="customerregister.php" method="post">
             <div class="input-box">
-                <input type="text" name="F_fname"  <?php echo 'value="' . $fname . '"'; ?> placeholder="Enter your First Name" required>
+                <input type="text" name="F_fname" <?php echo 'value="' . $fname . '"'; ?> placeholder="Enter your First Name" required>
             </div>
             <div class="input-box">
-                <input type="text" name="F_lname"  <?php echo 'value="' . $lname . '"'; ?>  placeholder="Enter your Last Name" required>
+                <input type="text" name="F_lname" <?php echo 'value="' . $lname . '"'; ?> placeholder="Enter your Last Name" required>
             </div>
             <div class="input-box">
                 <input type="text" name="F_mobile" <?php echo 'value="' . $mobile . '"'; ?> placeholder="Enter your Mobile Number" required>
