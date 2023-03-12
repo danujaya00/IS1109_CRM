@@ -54,7 +54,7 @@ if (isset($_POST['submit'])) {
 
         if ($result) {
             // query successful... redirecting to users page
-            header('Location: #');
+            header('Location: index.php');
         } else {
             $errors[] = 'Failed to add the new record.';
         }
@@ -107,7 +107,7 @@ if (isset($_POST['submit'])) {
                 <input type="text" name="F_gender" <?php echo 'value="' . $gender . '"'; ?> placeholder="Are you a Male or Female" required>
             </div>
             <br>
-            <div class="btn"><button type="submit" name="logIn">Register</button></div>
+            <div class="btn"><button type="submit" name="submit">Register</button></div>
             <br>
 
             <div class="text" style="background-color:white">
