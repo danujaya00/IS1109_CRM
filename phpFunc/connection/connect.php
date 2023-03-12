@@ -1,6 +1,6 @@
 <?php 
 
-	$dbhost = 'localhost';
+	$dbhost = 'localhost:3306';
 	$dbuser = 'root';
 	$dbpass = '';
 	$dbname = '1109_crm'; 

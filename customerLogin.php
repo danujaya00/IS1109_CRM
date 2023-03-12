@@ -4,7 +4,7 @@
 <?php 
 
 	// check for form submission
-	if (isset($_POST['logIn'])) {
+	if (isset($_POST['submit'])) {
 		
 		$errors = array();
 
@@ -72,7 +72,7 @@
     <div class="wrapper">
         <h1>Customer Login
         </h1>
-        <form action="#">
+        <form action="customerLogin.php" method="post">
             <?php
             if (isset($errors)) {
                 echo '<p class="error">Invalid Username / Mobile Number</p>';

@@ -45,12 +45,13 @@ if (isset($_POST['submit'])) {
         $email = mysqli_real_escape_string($connection, $_POST['F_email']);
         $address = mysqli_real_escape_string($connection, $_POST['F_address']);
         $age = mysqli_real_escape_string($connection, $_POST['F_age']);
-        $gender = mysqli_real_escape_string($connection, $_POST['F_gnder']);
+        $gender = mysqli_real_escape_string($connection, $_POST['F_gender']);
 
 
-        $query = "INSERT INTO tbl_user ( fname, lname, mon, address, email, age, gender) VALUES('{$fname}', '{$lname}', '{$mob}', '{$address}', '{$email}', '{$age}', '{$gender}')";
+        $query = "INSERT INTO customer ( fname, lname, mob, address, email, age, gender) VALUES('{$fname}', '{$lname}', '{$mobile}', '{$address}', '{$email}', '{$age}', '{$gender}')";
 
         $result = mysqli_query($connection, $query);
+        verify_query($result);
 
         if ($result) {
             // query successful... redirecting to users page
@@ -84,7 +85,7 @@ if (isset($_POST['submit'])) {
 		}
 
 		?>
-        <form action="#">
+        <form action="customerregister.php" method="post">
             <div class="input-box">
                 <input type="text" name="F_fname"  <?php echo 'value="' . $fname . '"'; ?> placeholder="Enter your First Name" required>
             </div>
