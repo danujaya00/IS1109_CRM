@@ -91,7 +91,7 @@
                 <input type="password" name ="password" placeholder="Enter your Mobile Number" required>
             </div>
             <br>
-            <div class="btn"><button type="submit" name="logIn">Log In</button></div>
+            <div class="btn"><button type="submit" name="submit">Log In</button></div>
             <br>
             <div class="text" style="background-color:white">
                 <h3>Not a Registered Customer? <br>
