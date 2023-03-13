@@ -1,9 +1,10 @@
 <?php
 require_once('../../connection/connect.php'); 
+session_start();
 
 if(!$_SESSION["name"]) {
     echo "<script>alert('Please Login First');</script>";
-    echo "<script>window.location='./index.php'</script>";
+    echo "<script>window.location='../../../index.php'</script>";
   }
 
 	if(isset($_POST['cus_insert'])){
@@ -19,4 +20,6 @@ if(!$_SESSION["name"]) {
         echo "<script>window.location='../../../staffView.php'</script>";
     }
     }
+
+    
 ?>
