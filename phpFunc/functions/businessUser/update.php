@@ -1,5 +1,23 @@
 <?php require_once('../../connection/conect.php'); 
 
+session_start();
+
+/*
+if(!$_SESSION["name"]) {
+    echo "<script>alert('Please Login First');</script>";
+    echo "<script>window.location='../../../index.php'</script>";
+  }else{
+  
+    if($_SESSION["role"] != 'salesman') { 
+
+        echo "<script>alert('Invalid Login Request');</script>";
+        echo "<script>window.location='../../../index.php'</script>";
+      }
+  
+  }
+*/
+
+
 if(isset($_GET['customer_id'])) {
     $sql1 = "SELECT * FROM crm_customer WHERE customer_id =".$_GET['customer_id']."";
     $result = mysqli_query($connection,$sql1);

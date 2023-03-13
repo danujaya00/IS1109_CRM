@@ -1,9 +1,23 @@
 <?php require_once('./phpFunc/connection/conect.php'); 
 
+session_start();
 /*
-if($_SESSION["role"] == 'sales') { 
-    $username = " SELECT name FROM user WHERE id = '".$_SESSION["id"]."'";
-} */
+if(!$_SESSION["name"]) {
+  echo "<script>alert('Please Login First');</script>";
+  echo "<script>window.location='./index.php'</script>";
+}else{
+
+  if($_SESSION["roles"] == 'salesman') { 
+    $username = " SELECT name FROM crm_users WHERE id = '".$_SESSION["id"]."'";
+
+    }else {
+      echo "<script>alert('Invalid Login Request');</script>";
+      echo "<script>window.location='./index.php'</script>";
+    }
+
+}
+
+*/
  
 $username='Sales_manager_name'; # for test
 
