@@ -40,7 +40,7 @@ echo"failed";
 
 <span class="wel-msg"><p>Welcome <span style="font-size:44px;"><?php echo" $username"; ?></span></p></span>
 <span class="sub-head">Details</span> <div class="sub-line"></div>
-<span><a href="./logout.php"><button class="log_out-button">LogOut</button> </a></span>
+<span><a href="./phpFunc/functions/buisnessUser/logout.php"><button class="log_out-button">LogOut</button> </a></span>
 
 
 </div>
