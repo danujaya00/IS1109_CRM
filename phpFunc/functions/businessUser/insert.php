@@ -7,10 +7,10 @@ require_once('../../connection/conect.php');
 
 	$result = mysqli_query($connection,$sql);
 	if($result) {
-        echo "<script>alert('Adding successfully');</script>";
-        echo "<script>window.location='../../../businessView.php'</script>";
+        echo "<script>alert(' Cutomer: ".$_POST['f_name']." ".$_POST['l_name']." added successfully');</script>";
+        echo "<script>window.location='../../../staffView.php'</script>";
     } else {
-        echo "<script>alert('Adding failed');</script>";
+        echo "<script>alert(' Customer: ".$_POST['f_name']." ".$_POST['l_name']." adding failed');</script>";
     }
     }
 ?>

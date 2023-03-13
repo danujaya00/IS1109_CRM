@@ -17,7 +17,7 @@ if(isset($_POST['update'])){
 
     if($result2) {
         echo "<script>alert('Updated successfully');</script>";
-        echo "<script>window.location='../../../businessView.php'</script>";
+        echo "<script>window.location='../../../staffView.php'</script>";
     } else {
         echo "<script>alert('Update failed');</script>";
     }
@@ -93,7 +93,7 @@ if(isset($_POST['update'])){
 <button type=submit name="update" class='edit-button' role='button'>Update</button> 
 </form>
 
-<a href="../../../businessView.php"><button class='back-button' role='button'>Back</button></a>
+<a href="../../../staffView.php"><button class='back-button' role='button'>Back</button></a>
 
 
 

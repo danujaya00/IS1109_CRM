@@ -5,7 +5,7 @@ if($_SESSION["role"] == 'sales') {
     $username = " SELECT name FROM user WHERE id = '".$_SESSION["id"]."'";
 } */
  
-$username='Sales_manager'; # for test
+$username='Sales_manager_name'; # for test
 
 $sql = "SELECT * FROM crm_customer";
 mysqli_query($connection, $sql);
@@ -39,7 +39,11 @@ echo"failed";
 <div>
 
 <span class="wel-msg"><p>Welcome <span style="font-size:44px;"><?php echo" $username"; ?></span></p></span>
+
+<!-- sub header -->
+
 <span class="sub-head">Details</span> <div class="sub-line"></div>
+
 <span><a href="./phpFunc/functions/buisnessUser/logout.php"><button class="log_out-button">LogOut</button> </a></span>
 
 
@@ -47,21 +51,17 @@ echo"failed";
 
 <!-- header over -->
 
+
 <!--menu-->
 
 <div class="menu">
 
 <span class="menu-header">MENU</span>
 
-        <span class="menu-item"><a href="./businessView.php">Details</a></span> <div class="menu-line"></div>
+        <span class="menu-item"><a href="./staffView.php">Details</a></span> <div class="menu-line"></div>
 </div>
 
 <!-- menu over -->
-
-
-<!-- sub header -->
-
-
 
 
 <!-- add button -->
@@ -83,40 +83,66 @@ echo"failed";
    
 <div style="padding:5px;">
 
-<span class="formbox-title"> ADD A CUSTOMER</span> <div class="line-dec"></div> 
-<br><br>
-<table class="table-dec" >
 
-<tr>
+<div class="input-pos">
 
- <td>  <label for="username">Customer ID:</label> </td> 
- <td>  <input type="text" id="username" name="cus_id" placeholder="" required> </td>  </tr>
-    
- <td>    <label for="fname">First Name:</label></td>
- <td>    <input type="text" id="fname" name="f_name" placeholder="" required> </td>   </tr>
+<div class="title">Add a customer</div><div class="line-dec"></div><br>
 
- <td>     <label for="lname">Last Name:</label></td>
- <td>    <input type="text" id="lname" name="l_name" placeholder="" required> </td>  </tr>
+<div class="subtitle"></div> <!-- no subttle added -->
 
- <td>     <label for="mobno">Mobile Number:&nbsp;&nbsp;&nbsp;</label></td>
- <td>    <input type="text" id="mobnum" name="mob" placeholder="" required> </td>  </tr>
+      <div class="input-container ic1">
+        <input id="customerid" class="input" type="text" name="cus_id" placeholder=" " required />
+        <div class="cut cut-long"></div>
+        <label for="firstname" class="placeholder">CustomerID</label>
+      </div>
 
- <td>     <label for="address">Address:</label></td>
- <td>     <input type="text" id="add" name="address" placeholder="" required> </td>  </tr>
+      <div class="input-container ic1">
+        <input id="fname" name="f_name" class="input" type="text" placeholder=" " required />
+        <div class="cut"></div>
+        <label for="firstname" class="placeholder">First name</label>
+      </div>
 
- <td>    <label for="email">E-mail:</label></td>
- <td>     <input type="text" id="email" name="email" placeholder="" required> </td>  </tr>
+      <div class="input-container ic2">
+        <input id="lastname" name="l_name" class="input" type="text" placeholder=" " required/>
+        <div class="cut"></div>
+        <label for="lastname" class="placeholder">Last name</label>
+      </div>
 
- <td>    <label for="age">Age:</label></td>
- <td>    <input type="text" id="age" name="age" placeholder="" required> </td>  </tr>
+      <div class="input-container ic2">
+        <input id="mobie" name="mob" class="input" type="text" placeholder=" "required />
+        <div class="cut cut-short"></div>
+        <label for="mobieNO" class="placeholder">Mobile</label>
+      </div>
 
- <td>    <label for="age">Gender:</label> </td>
- <td>    Male<input type="radio" id="male" name="gender" value="Male">  &nbsp;&nbsp; Female<input type="radio" id="female" name="gender"  value="Female"> </td>   </tr>
- <tr clospan="2"><td><button class="form-button"  type="submit" name="cus_insert">ADD</button></td></tr>
- </table> <br><br><br>
-    
-    
-    </div>
+      <div class="input-container ic2">
+        <input id="email"  name="email" class="input" type="text" placeholder=" " required/>
+        <div class="cut cut-short"></div>
+        <label for="email" class="placeholder">E-mail</label>
+      </div>
+
+      <div class="input-container ic2">
+        <input id="address"  name="address" class="input" type="text" placeholder=" "required />
+        <div class="cut"></div>
+        <label for="address" class="placeholder">&nbsp;Address</label>
+      </div>
+
+      <div class="input-container ic2">
+        <input id="age"  name="age" class="input" type="text" placeholder=" " required/>
+        <div class="cut cut-short"></div>
+        <label for="age" class="placeholder">&nbsp;&nbsp;Age</label>
+      </div>  
+
+      <br>
+      <div class="radio-dec-box ">
+    Male<input type="radio" id="male" name="gender" value="Male">  &nbsp;&nbsp; Female<input type="radio" id="female" name="gender"  value="Female">
+      </div>
+
+      <button class="form-button"  type="submit" name="cus_insert">ADD</button>
+
+</div>
+  
+    <br><br><br><br><br>
+     </div>
 </form>
 
 
