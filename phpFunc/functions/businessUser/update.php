@@ -2,7 +2,7 @@
 
 session_start();
 
-/*
+
 if(!$_SESSION["name"]) {
     echo "<script>alert('Please Login First');</script>";
     echo "<script>window.location='../../../index.php'</script>";
@@ -15,7 +15,7 @@ if(!$_SESSION["name"]) {
       }
   
   }
-*/
+
 
 
 if(isset($_GET['customer_id'])) {
