@@ -20,6 +20,7 @@ if(isset($_POST['update'])){
         echo "<script>window.location='../../../staffView.php'</script>";
     } else {
         echo "<script>alert('Update failed');</script>";
+        echo "<script>window.location='../../../staffView.php'</script>";
     }
     
      
@@ -81,8 +82,8 @@ if(isset($_POST['update'])){
        echo"<td><input type='text' name='f_name' value=".$row['fname']." ></td>";
        echo"<td><input type='text' name='l_name' value=".$row['lname']." ></td>";
        echo"<td><input type='text' name='mob' value=".$row['mob']." ></td>";
-       echo"<td><input type='text' name='address' value=".$row['address']." ></td>";
-       echo"<td><input type='text' name='email' value=".$row['email']." ></td>";
+       echo"<td style='width:200px;'><input type='text' name='address' value=".$row['address']." ></td>";
+       echo"<td style='width:200px;'><input type='text' name='email' value=".$row['email']." ></td>";
        echo"<td><input type='text' name='age' value=".$row['age']." ></td>";
        echo "<td> <select name='gender'>
        <option value=".$row['gender'].">Current :".$row['gender']."</option>

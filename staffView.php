@@ -7,7 +7,7 @@ if($_SESSION["role"] == 'sales') {
  
 $username='Sales_manager_name'; # for test
 
-$sql = "SELECT * FROM crm_customer";
+$sql = "SELECT * FROM crm_customer ORDER BY customer_id ASC";
 mysqli_query($connection, $sql);
 $result = mysqli_query($connection,$sql);
 
@@ -26,9 +26,9 @@ echo"failed";
  
 <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="./styles/businessUser/business.css" rel="stylesheet">
+        <link href="./styles/businessUser/main.css" rel="stylesheet">
         <link href="./styles/businessUser/add.css" rel="stylesheet">
-        <title>Business View</title>
+        <title>Staff View</title>
         
 </head>
 
@@ -208,7 +208,6 @@ window.onclick = function(event) {
     }
 }
 </script>
-
 
 </body>
 </html>

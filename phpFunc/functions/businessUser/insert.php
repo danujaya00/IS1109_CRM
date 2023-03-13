@@ -11,6 +11,7 @@ require_once('../../connection/conect.php');
         echo "<script>window.location='../../../staffView.php'</script>";
     } else {
         echo "<script>alert(' Customer: ".$_POST['f_name']." ".$_POST['l_name']." adding failed');</script>";
+        echo "<script>window.location='../../../staffView.php'</script>";
     }
     }
 ?>
