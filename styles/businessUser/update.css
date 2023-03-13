@@ -202,15 +202,26 @@ body {
 
   input[type="text"] {
     
+    text-align:center;
     display: inline-block;
-    width: 80%;
-   height:120%;
+    width: 95%;
+  height:40px;
     margin-right: 10%;
     font-size: 16px;
     line-height: 24px;
 position: relative;
-left:10px;
+left:5px;
+
+  background-color: #535061;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  outline: 0;
+  color:white;
+ 
+  
 }
+
 
 /*selet */
 
@@ -219,3 +230,4 @@ select{
     width:150px;
     height:30px;
 }
+

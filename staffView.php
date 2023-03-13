@@ -190,7 +190,10 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 </table>
 
+<!-- user view table over -->
 
+
+<!-- script for get the modal -->
 
 <script>
 // Get the modal
@@ -200,7 +203,7 @@ var modal = document.getElementById('addform');
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
-        modal.style.display = "none";
+        modal.style.display = "none"; // when click outside of model it close
         
     }
 }
