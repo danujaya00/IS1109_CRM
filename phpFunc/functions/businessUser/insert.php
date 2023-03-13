@@ -1,5 +1,10 @@
 <?php
-require_once('../../connection/conect.php'); 
+require_once('../../connection/connect.php'); 
+
+if(!$_SESSION["name"]) {
+    echo "<script>alert('Please Login First');</script>";
+    echo "<script>window.location='./index.php'</script>";
+  }
 
 	if(isset($_POST['cus_insert'])){
 

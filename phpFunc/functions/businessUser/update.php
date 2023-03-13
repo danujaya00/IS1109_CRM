@@ -1,4 +1,4 @@
-<?php require_once('../../connection/conect.php'); 
+<?php require_once('../../connection/connect.php'); 
 
 session_start();
 
@@ -8,7 +8,7 @@ if(!$_SESSION["name"]) {
     echo "<script>window.location='../../../index.php'</script>";
   }else{
   
-    if($_SESSION["role"] != 'salesman') { 
+    if($_SESSION["roles"] != 'salesman') { 
 
         echo "<script>alert('Invalid Login Request');</script>";
         echo "<script>window.location='../../../index.php'</script>";

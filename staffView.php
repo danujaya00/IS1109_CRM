@@ -1,4 +1,4 @@
-<?php require_once('./phpFunc/connection/conect.php'); 
+<?php require_once('./phpFunc/connection/connect.php'); 
 
 session_start();
 
@@ -7,19 +7,16 @@ if(!$_SESSION["name"]) {
   echo "<script>window.location='./index.php'</script>";
 }else{
 
-  if($_SESSION["roles"] == 'salesman') { 
-    $username = " SELECT name FROM crm_users WHERE id = '".$_SESSION["id"]."'";
-
-    }else {
+  if($_SESSION["roles"] !== 'salesman') { 
+  
       echo "<script>alert('Invalid Login Request');</script>";
       echo "<script>window.location='./index.php'</script>";
     }
 
 }
 
-
  
-$username='Sales_manager_name'; # for test
+#$username='Sales_manager_name'; # for test
 
 $sql = "SELECT * FROM crm_customer ORDER BY customer_id ASC";
 mysqli_query($connection, $sql);
@@ -52,13 +49,13 @@ echo"failed";
 <!-- header -->
 <div>
 
-<span class="wel-msg"><p>Welcome <span style="font-size:44px;"><?php echo" $username"; ?></span></p></span>
+<span class="wel-msg"><p>Welcome <span style="font-size:44px;"><?php echo $_SESSION["name"]; ?></span></p></span>
 
 <!-- sub header -->
 
 <span class="sub-head">Details</span> <div class="sub-line"></div>
 
-<span><a href="./phpFunc/functions/buisnessUser/logout.php"><button class="log_out-button">LogOut</button> </a></span>
+<span><a href="./phpFunc/functions/businessUser/logout.php"><button class="log_out-button">LogOut</button> </a></span>
 
 
 </div>
@@ -93,7 +90,7 @@ echo"failed";
 
 <form class="formbox-content animate" action="./phpFunc/functions/businessUser/insert.php" method="post">
 
-<span onclick="document.getElementById('addform').style.display='none'" class="close"><img  class="close-image"src="./assest/img/close.png"></span>
+<span onclick="document.getElementById('addform').style.display='none'" class="close"><img  class="close-image"src="./assets/img/close.png"></span>
    
 <div style="padding:5px;">
 
