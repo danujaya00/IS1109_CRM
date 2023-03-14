@@ -69,7 +69,7 @@ if(isset($_POST['update'])){
 
 <!--
 <span class="wel-msg"><p>Update Customer</p></span><div class="line-dec"></div> -->
-<span><a href="./logout.php"><button class="log_out-button">LogOut</button> </a></span>
+<span><a href="./logout.php"><button class="log_out-button">Logout</button> </a></span>
 
 
 </div>

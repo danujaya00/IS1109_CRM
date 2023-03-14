@@ -9,7 +9,7 @@ if(!$_SESSION["name"]) {
 
 	if(isset($_POST['cus_insert'])){
 
-	$sql = "INSERT INTO crm_customer (customer_id,fname,lname,mob,address,email,age,gender) VALUES ('".$_POST['cus_id']."','".$_POST['f_name']."','".$_POST['l_name']."','".$_POST['mob']."','".$_POST['address']."','".$_POST['email']."','".$_POST['age']."','".$_POST['gender']."')";
+	$sql = "INSERT INTO crm_customer (fname,lname,mob,address,email,age,gender) VALUES ('".$_POST['f_name']."','".$_POST['l_name']."','".$_POST['mob']."','".$_POST['address']."','".$_POST['email']."','".$_POST['age']."','".$_POST['gender']."')";
 
 	$result = mysqli_query($connection,$sql);
 	if($result) {

@@ -53,7 +53,7 @@ if (isset($_POST['logIn'])) {
 			verify_query($result_set);
 
 			// redirect to admin.php and staffView.php
-			if($_SESSION["roles"] == 'user'){
+			if($_SESSION["roles"] == 'salesman'){
 				header('Location: ./staffView.php');
 			}elseif(($_SESSION["roles"] == 'admin')){
 				header('Location: ./staffView.php');
