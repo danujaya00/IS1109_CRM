@@ -3,7 +3,7 @@
 
 
 body {
-    background-color: #27262C;
+    background-color: #1A1D25;
       height: 160vh;
     
   
@@ -31,7 +31,7 @@ body {
 
 .log_out-button {
     appearance: none;
-    background-color: #8500B4;
+    background-color: #005EFF;
     border: 0px solid #1A1A1A;
     border-radius: 10px;
     box-sizing: border-box;

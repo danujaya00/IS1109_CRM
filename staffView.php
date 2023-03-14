@@ -7,7 +7,7 @@ if(!$_SESSION["name"]) {
   echo "<script>window.location='./index.php'</script>";
 }else{
 
-  if($_SESSION["roles"] !== 'admin') { 
+  if($_SESSION["roles"] !== 'salesman') { 
   
       echo "<script>alert('Invalid Login Request');</script>";
       echo "<script>window.location='./index.php'</script>";
@@ -15,7 +15,16 @@ if(!$_SESSION["name"]) {
 
 }
 
- 
+#profile details
+
+    $id = $_SESSION["id"];
+
+    $sql1 = "SELECT * FROM crm_users WHERE id =$id";
+    $result_user = mysqli_query($connection,$sql1);
+    $row_user=mysqli_fetch_assoc($result_user);
+
+
+
 #$username='Sales_manager_name'; # for test
 
 $sql = "SELECT * FROM crm_customer ORDER BY customer_id ASC";
@@ -55,7 +64,7 @@ echo"failed";
 
 <span class="sub-head">Details</span> <div class="sub-line"></div>
 
-<span><a href="./phpFunc/functions/businessUser/logout.php"><button class="log_out-button">LogOut</button> </a></span>
+<span><a href="./phpFunc/functions/businessUser/logout.php"><button class="log_out-button">Logout</button> </a></span>
 
 
 </div>
@@ -67,10 +76,33 @@ echo"failed";
 
 <div class="menu">
 
-<span class="menu-header">MENU</span>
+<div class="piza-staff"><img class="piza-logo" src="./assets/img/logo.png">
 
-        <span class="menu-item"><a href="./staffView.php">Details</a></span> <div class="menu-line"></div>
+<span class="menu-text" style="color:orange;">PiZzA</span><br><span class="menu-text" style="font-size:28px; color:white; postion:relative; left:100px; bottom:45px;">Staff</span>
+
 </div>
+
+ <div class="menu-line"></div>
+
+
+<button class="pro-view">
+
+
+      <img class="pro-avatar" src="./assets/img/pro_avatar.png">
+      <span class="pro-text">Profile </span> 
+
+</button>
+
+<div class="content">
+<p>First Name:  <?php echo $_SESSION["name"]; ?><br><br>
+   Email : <?php echo" ". $row_user['email'] . " ";?><br><br>
+   Role :  <?php echo" ". $row_user['roles'] . " ";?> </p>
+
+
+</div>
+
+
+</div> <!-- menu div -->
 
 <!-- menu over -->
 
@@ -200,6 +232,24 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 
 <!-- script for get the modal -->
+
+<script>
+var coll = document.getElementsByClassName("pro-view");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
 
 <script>
 // Get the modal
