@@ -62,7 +62,7 @@ echo"failed";
 
 <!-- sub header -->
 
-<span class="sub-head">Details</span> <div class="sub-line"></div>
+<span class="sub-head">Customer Details</span> <div class="sub-line"></div>
 
 <span><a href="./phpFunc/functions/businessUser/logout.php"><button class="log_out-button">Logout</button> </a></span>
 
@@ -99,7 +99,7 @@ echo"failed";
    Role :  <?php echo" ". $row_user['roles'] . " ";?> </p>
 </div>
 
-<!--pro view over -->
+<!-- sales but-->
 
 <a href=#abc><button class="sales-but">
 
@@ -110,21 +110,19 @@ echo"failed";
 </button></a>
 
 
+<!--add butt-->
 
+<button onclick="document.getElementById('addform').style.display='block'" class="add-but">
+
+      <img class="add-logo" src="./assets/img/add_cus.png">
+      <span class="add-text">Add</span> 
+
+</button>
 
 
 </div> <!-- menu div -->
 
 <!-- menu over -->
-
-
-<!-- add button -->
-
-<div>
-    <span><button onclick="document.getElementById('addform').style.display='block'" class="add-button">Add</button></span>
-</div>
-
-<!-- add button over -->
 
 
 <!-- adding form -->
