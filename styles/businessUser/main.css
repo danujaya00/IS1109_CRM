@@ -136,7 +136,7 @@ border-radius: 17px;
   top:175px;
 
 }
-
+/* pro -view button + content */
 .pro-view{
   position: absolute;
   width: 200px;
@@ -153,17 +153,17 @@ height: 82px;
 
 .pro-avatar{
   height: auto;
-  width: 65px;
+  width: 50px;
   position: relative;
-  left:0px;
+  left:-10px;
   top:5px;
 }
 
 .pro-text{
   font-family: "Montserrat", sans-serif;
-  font-size:25px;
+  font-size:23px;
   position:relative;
-  bottom:15px;
+  bottom:12px;
   left:5px;
   color:white;
   cursor:default;
@@ -181,13 +181,17 @@ height: 82px;
   float: right;
   margin-left: 5px;
   position: relative;
-  top:32px;
+  top:20px;
   right:10px;
  
 }
 
-.pro-vire:active{
+.pro-view:active{
   transform: translateY(0); 
+}
+
+.pro-view:disabled {
+  pointer-events: none;
 }
 
 .active:after {
@@ -198,7 +202,6 @@ height: 82px;
 .content {
   font-family: 'Inter';
   font-size:2.0vh;
-font-style: normal;
   color:white;
   border-radius: 17px;
   padding: 0 18px;
@@ -210,7 +213,60 @@ font-style: normal;
   position: relative;
   top:284px;
   left:0px;
+  z-index:1;
 }
+
+/*Menu sales button*/
+
+.sales-but{
+  position: absolute;
+  width: 200px;
+  height: 82px;
+  left: 23px;
+  top: 305px;
+  outline:0;
+  border:0;
+
+  background: #0F151C;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 17px;
+}
+
+.sales-but:disabled {
+  pointer-events: none;
+}
+
+.sales-but:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  background-color: #121124;
+  transform: translateY(-2px);
+}
+
+.sales-but:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+
+.sales-logo{
+  height: auto;
+  width: 90px;
+  position: relative;
+  left:-28px;
+  top:1px;
+}
+
+.sales-text{
+  font-family: "Montserrat", sans-serif;
+  font-size:23px;
+  position:relative;
+  bottom:20px;
+  left:-35px;
+  color:white;
+  cursor:default;
+}
+
+
 
 /*  Edit button */
 

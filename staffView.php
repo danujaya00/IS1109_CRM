@@ -84,7 +84,7 @@ echo"failed";
 
  <div class="menu-line"></div>
 
-
+  <!-- pro view start -->
 <button class="pro-view">
 
 
@@ -93,13 +93,24 @@ echo"failed";
 
 </button>
 
-<div class="content">
+<div id="content-box" class="content">
 <p>First Name:  <?php echo $_SESSION["name"]; ?><br><br>
    Email : <?php echo" ". $row_user['email'] . " ";?><br><br>
    Role :  <?php echo" ". $row_user['roles'] . " ";?> </p>
-
-
 </div>
+
+<!--pro view over -->
+
+<a href=#abc><button class="sales-but">
+
+      <img class="sales-logo" src="./assets/img/sales.png">
+      <span class="sales-text">Sales </span> 
+
+
+</button></a>
+
+
+
 
 
 </div> <!-- menu div -->
