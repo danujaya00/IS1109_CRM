@@ -1,11 +1,18 @@
-<?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "1109_crm";
+<?php 
 
-// Create connection
-$connection = mysqli_connect($servername, $username, $password, $dbname) or die("DB connection failed");
+	$dbhost = 'localhost:3306';
+	$dbuser = 'root';
+	$dbpass = '';
+	$dbname = 'crmv3'; 
+
+	$connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
+
+    // Checking the connection
+	if ($connection->connect_error) {
+		die('Database connection failed ' . $connection->connect_error);
+	}else{
+        // echo "Database connection success"   ;
+	}
 
 ?>
