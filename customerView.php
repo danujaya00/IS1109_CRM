@@ -30,8 +30,7 @@ echo"failed";
  
 <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="./styles/businessUser/main.css" rel="stylesheet">
-        <link href="./styles/businessUser/add.css" rel="stylesheet">
+        <link href="./styles/customer/main.css" rel="stylesheet">
         <title>Staff View</title>
         
 </head>
