@@ -55,6 +55,7 @@ form .input-box input {
   border-radius: 6px;
   /* transition: all 0.3s ease; */
 }
+
 .input-box.button input {
   color: #fff;
   letter-spacing: 1px;
@@ -96,3 +97,6 @@ button {
   text-transform: uppercase;
   transition: transform 80ms ease-in;
 }
+/* radio-dec-box{
+  background-color: white;
+} */

@@ -54,6 +54,16 @@ if (isset($_POST['submit'])) {
         $result = mysqli_query($connection, $query);
         verify_query($result);
 
+
+        // if($result) {
+        //     echo "<script>alert(' Cutomer: ".$_POST['f_name']." ".$_POST['l_name']." added successfully');</script>";
+        //     echo "<script>window.location='../../../staffView.php'</script>";
+        // } else {
+        //     echo "<script>alert(' Customer: ".$_POST['f_name']." ".$_POST['l_name']." adding failed');</script>";
+        //     echo "<script>window.location='../../../staffView.php'</script>";
+        // } 
+
+
         if ($result) {
             // query successful... redirecting to users page
             header('Location: index.php');
@@ -109,9 +119,13 @@ if (isset($_POST['submit'])) {
             <div class="input-box">
                 <input type="number" name="F_age" <?php echo 'value="' . $age . '"'; ?>placeholder="Enter your Age" required>
             </div>
-            <div class="input-box">
+            <!-- <div class="input-box">
                 <input type="text" name="F_gender" <?php echo 'value="' . $gender . '"'; ?> placeholder="Are you a Male or Female" required>
-            </div>
+            </div> -->
+            <div class="radio-dec-box " style="background-color: white;">
+    Male<input type="radio" id="male" name="F_gender" value="Male">  &nbsp;&nbsp; Female<input type="radio" id="female" name="F_gender"  value="Female">
+      </div>
+
             <br>
             <div class="btn"><button type="submit" name="submit">Register</button></div>
             <br>
