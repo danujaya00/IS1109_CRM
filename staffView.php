@@ -90,7 +90,7 @@ echo"failed";
 
 <form class="formbox-content animate" action="./phpFunc/functions/businessUser/insert.php" method="post">
 
-<span onclick="document.getElementById('addform').style.display='none'" class="close"><img  class="close-image"src="./assets/img/close.png"></span>
+<span onclick="document.getElementById('addform').style.display='none'" class="close"><img  class="close-image" src="./assets/img/close.png"></span>
    
 <div style="padding:5px;">
 
@@ -101,12 +101,7 @@ echo"failed";
 
 <div class="subtitle"></div> <!-- no subttle added -->
 
-      <div class="input-container ic1">
-        <input id="customerid" class="input" type="text" name="cus_id" placeholder=" " required />
-        <div class="cut cut-long"></div>
-        <label for="firstname" class="placeholder">CustomerID</label>
-      </div>
-
+    
       <div class="input-container ic1">
         <input id="fname" name="f_name" class="input" type="text" placeholder=" " required />
         <div class="cut"></div>

@@ -56,6 +56,7 @@ if(isset($_POST['update'])){
 <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="../../../styles/businessUser/update.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <title>Customer Update</title>
         
 </head>
@@ -66,8 +67,8 @@ if(isset($_POST['update'])){
 <!-- header -->
 <div>
 
-
-<span class="wel-msg"><p>Update Customer</p></span><div class="line-dec"></div>
+<!--
+<span class="wel-msg"><p>Update Customer</p></span><div class="line-dec"></div> -->
 <span><a href="./logout.php"><button class="log_out-button">LogOut</button> </a></span>
 
 
@@ -75,45 +76,76 @@ if(isset($_POST['update'])){
 
 <!-- header over -->
 
-<!-- user update view table -->
 
-<table border="0" class="table_dec">
+<!-- update form -->
 
-<tr bgcolor="#404040"> 
 
-<th>Customer ID</th>
-<th>First Name</th>
-<th>Last Name</th>
-<th>Mobile</th>
-<th>Address</th>
-<th>E-mail</th>
-<th>&nbsp;&nbsp;Age&nbsp;&nbsp;</th>
-<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<div class=cont-pos>
+<div class="container" id="container">
 
-</tr> 
-
-<form action="update.php" method="post">
-<tr bgcolor='#373737'>
-
+<div class="form-container">
     
-<?php echo "<td><input type='text' name='cus_id' value=".$row['customer_id']." readonly></td>";
-       echo"<td><input type='text' name='f_name' value=".$row['fname']." ></td>";
-       echo"<td><input type='text' name='l_name' value=".$row['lname']." ></td>";
-       echo"<td><input type='text' name='mob' value=".$row['mob']." ></td>";
-       echo"<td style='width:200px;'><input type='text' name='address' value=".$row['address']." ></td>";
-       echo"<td style='width:200px;'><input type='text' name='email' value=".$row['email']." ></td>";
-       echo"<td><input type='text' name='age' value=".$row['age']." ></td>";
-       echo "<td> <select name='gender'>
-       <option value=".$row['gender'].">Current :".$row['gender']."</option>
-       <option value='Male'>Male</option>
-       <option value='Female' >Female</option></select></td>";
+<form action="update.php" method="post">
+<a href="../../../staffView.php"><i class="fa-solid fa-arrow-left fa-3x navigation"></i></a>
+<div class="title">Update Customer</div><div class="line-dec2"></div><br>
+<?php
+
+echo "<div class='input-container ic1'>";
+echo "<input id='customerid' class='input' type='text' name='cus_id' placeholder='' value=".$row['customer_id']." readonly />";
+echo "<div class='cut cut-long'></div>";
+echo "<label for='firstname' class='placeholder'>CustomerID</label>";
+echo "</div>";
+
+echo "<div class='input-container ic1'>";
+echo "<input id='fname' name='f_name' class='input' type='text' placeholder=' ' value=".$row['fname']." />";
+echo "<div class='cut'></div>";
+echo "<label for='firstname' class='placeholder'>First name</label>";
+echo "</div>";
+
+echo "<div class='input-container ic2'>";
+echo "<input id='lastname' name='l_name' class='input' type='text' placeholder=' ' value=".$row['lname']." />";
+echo "<div class='cut'></div>";
+echo "<label for='lastname' class='placeholder'>Last name</label>";
+echo "</div>";
+
+echo "<div class='input-container ic2'>";
+echo "<input id='mobie' name='mob' class='input' type='text' placeholder=' ' value=".$row['mob']." />";
+echo "<div class='cut cut-short'></div>";
+echo "<label for='mobieNO' class='placeholder'>Mobile</label>";
+echo "</div>";
+
+echo "<div class='input-container ic2'>";
+echo "<input id='email'  name='email' class='input' type='text' placeholder=' ' value=".$row['email']." />";
+echo "<div class='cut cut-short'></div>";
+echo "<label for='email' class='placeholder'>E-mail</label>";
+echo "</div>";
+
+echo "<div class='input-container ic2'>";
+echo "<input id='address'  name='address' class='input' type='text' placeholder=' 'value=".$row['address']." />";
+echo "<div class='cut'></div>";
+echo "<label for='address' class='placeholder'>&nbsp;Address</label>";
+echo "</div>";
+
+echo "<div class='input-container ic2'>";
+echo "<input id='age'  name='age' class='input' type='text' placeholder=' ' value=".$row['age']." />";
+echo "<div class='cut cut-short'></div>";
+echo "<label for='age' class='placeholder'>&nbsp;&nbsp;Age</label>";
+echo "</div>";
+
+echo "<select name='gender'>
+<option value=".$row['gender'].">Gender : ".$row['gender']."</option>
+<option value='Male'>Male</option>
+<option value='Female' >Female</option></select> ";
+
+echo "<button type='submit' name='update' class='edit-button' role='button'>Update</button> "
 ?>
-</table>
-<button type=submit name="update" class='edit-button' role='button'>Update</button> 
+
+
 </form>
+</div>
+</div>
 
-<a href="../../../staffView.php"><button class='back-button' role='button'>Back</button></a>
-
+<!-- update form  over-->
 
 
 </body>

@@ -86,7 +86,7 @@ input[type="text"], input[type="password"] {
 .input-pos{
   position: relative;
   right:100px;
-  top:50px;
+  top:30px;
 }
 
 .title {
@@ -257,7 +257,7 @@ input[type="text"], input[type="password"] {
 
   .close{
     position: relative;
-    bottom:400px;
+    bottom:350px;
     left:90%;
   }
 
