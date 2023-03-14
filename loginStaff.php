@@ -56,7 +56,7 @@ if (isset($_POST['logIn'])) {
 			if($_SESSION["roles"] == 'user'){
 				header('Location: ./staffView.php');
 			}elseif(($_SESSION["roles"] == 'admin')){
-				header('Location: admin.php');
+				header('Location: ./staffView.php');
 			}
 		} else {
 			// invalid login details

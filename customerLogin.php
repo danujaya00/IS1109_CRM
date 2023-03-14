@@ -38,9 +38,9 @@ if (isset($_POST['submit'])) {
         if (mysqli_num_rows($result_set) == 1) {
 
             // user found
-            $username = mysqli_fetch_assoc($result_set);
-            $_SESSION['lname'] = $user['lname'];
-            $_SESSION['email'] = $user['email'];
+            $customer = mysqli_fetch_assoc($result_set);
+            $_SESSION['name'] = $customer['fname'];
+            $_SESSION['c_id'] = $customer['customer_id'];
             $result_set = mysqli_query($connection, $query);
 
             verify_query($result_set);
