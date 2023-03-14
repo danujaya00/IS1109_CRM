@@ -52,8 +52,12 @@ if (isset($_POST['logIn'])) {
 
 			verify_query($result_set);
 
-			// redirect to admin.php
-			header('Location: admin.php');
+			// redirect to admin.php and staffView.php
+			if($_SESSION["roles"] == 'user'){
+				header('Location: ./staffView.php');
+			}elseif(($_SESSION["roles"] == 'admin')){
+				header('Location: admin.php');
+			}
 		} else {
 			// invalid login details
 			$errors[] = 'Invalid Username / Password';

@@ -48,6 +48,7 @@ if (isset($_POST['submit'])) {
         $gender = mysqli_real_escape_string($connection, $_POST['F_gender']);
 
 
+
         $query = "INSERT INTO crm_customer ( fname, lname, mob, address, email, age, gender) VALUES('{$fname}', '{$lname}', '{$mobile}', '{$address}', '{$email}', '{$age}', '{$gender}')";
 
         $result = mysqli_query($connection, $query);

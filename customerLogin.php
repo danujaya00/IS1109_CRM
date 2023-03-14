@@ -25,6 +25,7 @@ if (isset($_POST['submit'])) {
 
 
         //query to check if the user is in the database
+
         $query = "SELECT * FROM crm_customer 
 						WHERE fname = '{$username}' 
 						AND mob = '{$password}' 
