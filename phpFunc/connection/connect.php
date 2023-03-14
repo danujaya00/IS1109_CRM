@@ -3,7 +3,7 @@
 	$dbhost = 'localhost:3306';
 	$dbuser = 'root';
 	$dbpass = '';
-	$dbname = '1109_crm'; 
+	$dbname = 'crmv3'; 
 
 	$connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 
