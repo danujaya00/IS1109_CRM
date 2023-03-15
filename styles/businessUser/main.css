@@ -35,7 +35,32 @@ body {
    width: 70%;
    height: auto;
    border-radius: 4px;
+   
     
+}
+
+.table_dec2{
+  font-family: 'Inter', sans-serif;
+  padding-bottom: 50px;
+font-size: 1.3vw;
+  box-sizing: border-box;
+
+  text-align: center;
+  
+  border-color:#27262C;
+  border: 0px solid #5B5B5B;
+ /* border-collapse: collapse; */
+  color:white;
+
+  position: relative;
+  left: 350px;
+  bottom: 425px;
+  
+ width: 70%;
+ height:auto;
+ border-radius: 4px;
+ z-index:-3;
+  
 }
 
 th {
@@ -97,6 +122,7 @@ color: #FFFFFF;
   background: #1A1D25;
   box-shadow: 0px 4px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
+  z-index:4;
 
 
 /*width: 275px;
@@ -227,7 +253,7 @@ height: 82px;
   width: 200px;
   height: 82px;
   left: 23px;
-  top: 305px;
+  top: 410px;
   outline:0;
   border:0;
 
@@ -277,7 +303,7 @@ height: 82px;
   width: 200px;
   height: 82px;
   left: 23px;
-  top: 410px;
+  top: 515px;
   outline:0;
   border:0;
 
@@ -320,6 +346,57 @@ height: 82px;
   cursor:default;
 }
 
+
+/*Customer menu button*/
+
+.cus-but{
+  position: absolute;
+  width: 200px;
+  height: 82px;
+  left: 23px;
+  top: 305px;
+  outline:0;
+  border:0;
+
+  background: #0F151C;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 17px;
+}
+
+.cus-but:disabled {
+  pointer-events: none;
+}
+
+.cus-but:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  background-color: #121124;
+  transform: translateY(-2px);
+}
+
+.cus-but:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+
+.cus-logo{
+  height: auto;
+  width: 55px;
+  position: relative;
+  left:0px;
+  top:0px;
+}
+
+.cus-text{
+  font-family: "Montserrat", sans-serif;
+  font-size:23px;
+  position:relative;
+  bottom:16px;
+  left:-0px;
+  color:white;
+  cursor:default;
+}
+
 /*  Edit button */
 
 .edit-button {
@@ -344,6 +421,7 @@ height: 40px;
   touch-action: manipulation;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   will-change: transform;
+  
 
 }
 

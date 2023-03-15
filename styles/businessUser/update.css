@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
 
 
 body {
@@ -73,9 +74,9 @@ body {
   }
 
 
-  /*  Edit button */
+  /*  update button */
 
-.edit-button {
+.update-button {
     appearance: none;
     background-color: #0359FF;
     border: 0px solid #1A1A1A;
@@ -106,69 +107,20 @@ body {
     
   }
   
-  .edit-button:disabled {
+  .update-button:disabled {
     pointer-events: none;
   }
   
-  .edit-button:hover {
+  .update-button:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
   }
   
-  .edit-button:active {
+  .update-button:active {
     box-shadow: none;
     transform: translateY(0);
   }
-
-
-
-
-  /*  back button */
-
-  .back-button {
-    appearance: none;
-    background-color: #F65655;
-    border: 0px solid #1A1A1A;
-    border-radius: 10px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Exo', sans-serif;
-    font-size: 16px;
-    width: 150px;
-    height: 60px;
-    outline: none;
-    text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    will-change: transform;
-
-    position: relative;
-    left:45%;
-    top:350px;
-    
-  }
   
-  .back-button:disabled {
-    pointer-events: none;
-  }
-  
-  .back-button:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
-  
-  .back-button:active {
-    box-shadow: none;
-    transform: translateY(0);
-  }
-
-
   /* line for from tite */
 
   .line-dec{
@@ -298,7 +250,7 @@ body {
 /*selet */
 
 select{
-    margin-top: 40px;
+    margin-top: 35px;
     text-align: center;
     background-color: #11264C;
     font-family: 'inter', sans-serif;
@@ -327,7 +279,7 @@ select{
   margin: -25px 0 0 -25px;
   position: absolute;
   top: 20%;
-  left: 25%;
+  left: 30%;
  
   
 }
@@ -360,7 +312,7 @@ select{
   background: #1A1D25;
   box-shadow: 0px 4px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
-
+z-index:4;
 
 /*width: 275px;
 ackground: linear-gradient(180deg, #8500B4 20.83%, #332940 20.84%);
@@ -410,6 +362,7 @@ border-radius: 17px;
   top:175px;
 
 }
+
 /* pro -view button + content */
 .pro-view{
   position: absolute;
@@ -497,7 +450,7 @@ height: 82px;
   width: 200px;
   height: 82px;
   left: 23px;
-  top: 305px;
+  top: 410px;
   outline:0;
   border:0;
 
@@ -536,6 +489,107 @@ height: 82px;
   position:relative;
   bottom:20px;
   left:-35px;
+  color:white;
+  cursor:default;
+}
+
+/*Menu add button*/
+
+.add-but{
+  position: absolute;
+  width: 200px;
+  height: 82px;
+  left: 23px;
+  top: 515px;
+  outline:0;
+  border:0;
+
+  background: #0F151C;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 17px;
+}
+
+.add-but:disabled {
+  pointer-events: none;
+}
+
+.add-but:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  background-color: #121124;
+  transform: translateY(-2px);
+}
+
+.add-but:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+
+.add-logo{
+  height: auto;
+  width: 70px;
+  position: relative;
+  left:-28px;
+  top:1px;
+}
+
+.add-text{
+  font-family: "Montserrat", sans-serif;
+  font-size:23px;
+  position:relative;
+  bottom:20px;
+  left:-25px;
+  color:white;
+  cursor:default;
+}
+
+
+/*Customer menu button*/
+
+.cus-but{
+  position: absolute;
+  width: 200px;
+  height: 82px;
+  left: 23px;
+  top: 305px;
+  outline:0;
+  border:0;
+
+  background: #0F151C;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 17px;
+}
+
+.cus-but:disabled {
+  pointer-events: none;
+}
+
+.cus-but:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  background-color: #121124;
+  transform: translateY(-2px);
+}
+
+.cus-but:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+
+.cus-logo{
+  height: auto;
+  width: 55px;
+  position: relative;
+  left:0px;
+  top:0px;
+}
+
+.cus-text{
+  font-family: "Montserrat", sans-serif;
+  font-size:23px;
+  position:relative;
+  bottom:16px;
+  left:-0px;
   color:white;
   cursor:default;
 }

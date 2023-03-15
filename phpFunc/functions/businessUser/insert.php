@@ -2,7 +2,7 @@
 require_once('../../connection/connect.php'); 
 session_start();
 
-if(!$_SESSION["name"]) {
+if(!($_SESSION["name"] AND $_SESSION["id"] AND $_SESSION["roles"] )) {
     echo "<script>alert('Please Login First');</script>";
     echo "<script>window.location='../../../index.php'</script>";
   }
@@ -11,6 +11,7 @@ if(!$_SESSION["name"]) {
 
   if(isset($_POST['cus_insert'])){
     
+#$sql2 get customer id where was data deleted (LIMIT to 1, only get one row).  if  count=0 mean no deleted row then normal insert , else update data into a delete row.
 
         $sql2="SELECT customer_id FROM crm_customer WHERE fname='' AND lname='' AND mob='0' AND address='' AND email='' AND age='0' AND gender='' LIMIT 1";
         $result_cusid = mysqli_query($connection,$sql2);

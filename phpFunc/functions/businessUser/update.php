@@ -3,7 +3,7 @@
 session_start();
 
 
-if(!$_SESSION["name"]) {
+if(!($_SESSION["name"] AND $_SESSION["id"] AND $_SESSION["roles"] )) {
     echo "<script>alert('Please Login First');</script>";
     echo "<script>window.location='../../../index.php'</script>";
   }else{
@@ -122,6 +122,16 @@ if(isset($_POST['update'])){
 
 </button></a>
 
+<!--customer butt-->
+
+<a href="../../../staffView.php"><button  class="cus-but">
+
+      <img class="cus-logo" src="../../../assets/img/cus_det.png">
+      <span class="cus-text">Customer</span> 
+
+</button></a>
+
+
 
 </div> <!-- menu div -->
 
@@ -148,37 +158,37 @@ echo "<label for='firstname' class='placeholder'>CustomerID</label>";
 echo "</div>";
 
 echo "<div class='input-container ic1'>";
-echo "<input id='fname' name='f_name' class='input' type='text' placeholder=' ' value=".$row['fname']." />";
+echo "<input id='fname' name='f_name' class='input' type='text' placeholder=' ' value=".$row['fname']." >";
 echo "<div class='cut'></div>";
 echo "<label for='firstname' class='placeholder'>First name</label>";
 echo "</div>";
 
 echo "<div class='input-container ic2'>";
-echo "<input id='lastname' name='l_name' class='input' type='text' placeholder=' ' value=".$row['lname']." />";
+echo "<input id='lastname' name='l_name' class='input' type='text' placeholder=' ' value=".$row['lname']." >";
 echo "<div class='cut'></div>";
 echo "<label for='lastname' class='placeholder'>Last name</label>";
 echo "</div>";
 
 echo "<div class='input-container ic2'>";
-echo "<input id='mobie' name='mob' class='input' type='text' placeholder=' ' value=".$row['mob']." />";
+echo "<input id='mobie' name='mob' class='input' type='text' placeholder=' ' value=".$row['mob']." >";
 echo "<div class='cut cut-short'></div>";
 echo "<label for='mobieNO' class='placeholder'>Mobile</label>";
 echo "</div>";
 
 echo "<div class='input-container ic2'>";
-echo "<input id='email'  name='email' class='input' type='text' placeholder=' ' value=".$row['email']." />";
+echo "<input id='email'  name='email' class='input' type='text' placeholder=' ' value=".$row['email']." >";
 echo "<div class='cut cut-short'></div>";
 echo "<label for='email' class='placeholder'>E-mail</label>";
 echo "</div>";
 
 echo "<div class='input-container ic2'>";
-echo "<input id='address'  name='address' class='input' type='text' placeholder=' 'value=".$row['address']." />";
+echo "<input id='address'  name='address' class='input' type='text' placeholder=' 'value=".$row['address']." >";
 echo "<div class='cut'></div>";
 echo "<label for='address' class='placeholder'>&nbsp;Address</label>";
 echo "</div>";
 
 echo "<div class='input-container ic2'>";
-echo "<input id='age'  name='age' class='input' type='text' placeholder=' ' value=".$row['age']." />";
+echo "<input id='age'  name='age' class='input' type='text' placeholder=' ' value=".$row['age']." >";
 echo "<div class='cut cut-short'></div>";
 echo "<label for='age' class='placeholder'>&nbsp;&nbsp;Age</label>";
 echo "</div>";
@@ -188,7 +198,7 @@ echo "<select name='gender'>
 <option value='Male'>Male</option>
 <option value='Female' >Female</option></select> ";
 
-echo "<button type='submit' name='update' class='edit-button' role='button'>Update</button> "
+echo "<button type='submit' name='update' class='update-button' role='button'>Update</button>"
 ?>
 
 </form>

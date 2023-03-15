@@ -2,7 +2,7 @@
 
 session_start();
 
-if(!$_SESSION["name"]) {
+if(!($_SESSION["name"] AND $_SESSION["id"] AND $_SESSION["roles"] )) {
   echo "<script>alert('Please Login First');</script>";
   echo "<script>window.location='./index.php'</script>";
 }else{
@@ -25,7 +25,6 @@ if(!$_SESSION["name"]) {
 
 
 
-#$username='Sales_manager_name'; # for test
 
 $sql = "SELECT * FROM crm_customer ORDER BY customer_id ASC";
 mysqli_query($connection, $sql);
@@ -99,9 +98,19 @@ echo"failed";
    Role :  <?php echo" ". $row_user['roles'] . " ";?> </p>
 </div>
 
+
+<!--customer butt-->
+
+<button  class="cus-but">
+
+      <img class="cus-logo" src="./assets/img/cus_det.png">
+      <span class="cus-text">Customer</span> 
+
+</button>
+
 <!-- sales but-->
 
-<a href=#abc><button class="sales-but">
+<a href="./salesView.php"><button class="sales-but">
 
       <img class="sales-logo" src="./assets/img/sales.png">
       <span class="sales-text">Sales </span> 
