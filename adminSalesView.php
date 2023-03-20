@@ -58,7 +58,7 @@ $result = mysqli_query($connection,$sql);
 
 <!-- sub header -->
 
-<span class="sub-head">User Details</span> <div class="sub-line"></div>
+<span class="sub-head">Customer Details</span> <div class="sub-line"></div>
 
 <span><a href="./phpFunc/functions/businessUser/logout.php"><button class="log_out-button">Logout</button> </a></span>
 
@@ -94,19 +94,9 @@ $result = mysqli_query($connection,$sql);
    Role :  <?php echo" ". $row_user['roles'] . " ";?> </p>
 </div>
 
-<!-- staff view button start  -->
-<!-- <a href="./admin.php"><button class="sales-but">
-<button  class="cus-but">
-
-      <img class="cus-logo" src="./assets/img/pro_avatar.png">
-      <span class="cus-text">staff</span> 
-
-</button>
-</a> -->
-<!-- staff view button over -->
 
 <!--customer butt-->
-<a href="./adminCustomerView.php"><button class="sales-but">
+<a href="./adminpages/adminCustomerView.php"><button class="sales-but">
 <button  class="cus-but">
 
       <img class="cus-logo" src="./assets/img/cus_det.png">
@@ -116,7 +106,7 @@ $result = mysqli_query($connection,$sql);
 </a>
 <!-- sales but-->
 
-<a href="./adminSalesView.php"><button class="sales-but">
+<a href="./adminpages/adminSalesView.php"><button class="sales-but">
 
       <img class="sales-logo" src="./assets/img/sales.png">
       <span class="sales-text">Sales </span> 
