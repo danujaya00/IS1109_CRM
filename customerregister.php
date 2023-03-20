@@ -54,22 +54,21 @@ if (isset($_POST['submit'])) {
         $result = mysqli_query($connection, $query);
         verify_query($result);
 
-
-        // if($result) {
-        //     echo "<script>alert(' Cutomer: ".$_POST['f_name']." ".$_POST['l_name']." added successfully');</script>";
-        //     echo "<script>window.location='../../../staffView.php'</script>";
-        // } else {
-        //     echo "<script>alert(' Customer: ".$_POST['f_name']." ".$_POST['l_name']." adding failed');</script>";
-        //     echo "<script>window.location='../../../staffView.php'</script>";
-        // } 
-
-
         if ($result) {
-            // query successful... redirecting to users page
-            header('Location: index.php');
+            echo "<script>alert('Updated successfully');</script>";
+            echo "<script>window.location='index.php";
         } else {
-            $errors[] = 'Failed to add the new record.';
+            echo "<script>alert('Update failed');</script>";
+            echo "<script>window.location='customerregister.php'</script>";;
         }
+    }
+
+    if($result2) {
+        echo "<script>alert('Updated successfully');</script>";
+        echo "<script>window.location='../../../custViewUserDetails.php'</script>";
+    } else {
+        echo "<script>alert('Update failed');</script>";
+        echo "<script>window.location='../../../custViewUserDetails.php'</script>";
     }
 }
 

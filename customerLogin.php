@@ -41,12 +41,14 @@ if (isset($_POST['submit'])) {
             $customer = mysqli_fetch_assoc($result_set);
             $_SESSION['name'] = $customer['fname'];
             $_SESSION['c_id'] = $customer['customer_id'];
+            $_SESSION['email'] = $customer['email'];
+            $_SESSION['roles'] = 'customer';
             $result_set = mysqli_query($connection, $query);
 
             verify_query($result_set);
 
             // redirect to admin.php
-            header('Location: customerView.php');
+            header('Location: custViewUserDetails.php');
         } else {
             $errors[] = 'Invalid Username / MobileNo';
         }

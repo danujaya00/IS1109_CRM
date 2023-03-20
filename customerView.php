@@ -31,7 +31,7 @@ echo"failed";
 <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="./styles/customer/main.css" rel="stylesheet">
-        <title>Staff View</title>
+        <title>Customer View</title>
         
 </head>
 
@@ -61,7 +61,8 @@ echo"failed";
 
 <span class="menu-header">MENU</span>
 
-        <span class="menu-item"><a href="./customerView.php">Your Details</a></span> <div class="menu-line"></div>
+        <span class="menu-item"><a href="./customerView.php">Your Details</a></span> <div class="menu-line"></div><br><br>
+        <span class="menu-item"><a href="./customerViewSales.php">Purchase History</a></span> <div class="menu-line"></div>
 </div>
 
 <!-- menu over -->

@@ -27,10 +27,10 @@ if(isset($_POST['update'])){
 
     if($result2) {
         echo "<script>alert('Updated successfully');</script>";
-        echo "<script>window.location='../../../customerView.php'</script>";
+        echo "<script>window.location='../../../custViewUserDetails.php'</script>";
     } else {
         echo "<script>alert('Update failed');</script>";
-        echo "<script>window.location='../../../customerView.php'</script>";
+        echo "<script>window.location='../../../custViewUserDetails.php'</script>";
     }
     
      
@@ -78,7 +78,7 @@ if(isset($_POST['update'])){
 <div class="form-container">
     
 <form action="update.php" method="post">
-<a href="../../../customerView.php"><i class="fa-solid fa-arrow-left fa-3x navigation"></i></a>
+<a href="../../../custViewUserDetails.php"><i class="fa-solid fa-arrow-left fa-3x navigation"></i></a>
 <div class="title">Update Customer</div><div class="line-dec2"></div><br>
 <?php
 
