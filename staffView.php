@@ -2,7 +2,7 @@
 
 session_start();
 
-if(!$_SESSION["name"]) {
+if(!($_SESSION["name"] AND $_SESSION["id"] AND $_SESSION["roles"] )) {
   echo "<script>alert('Please Login First');</script>";
   echo "<script>window.location='./index.php'</script>";
 }else{
@@ -25,7 +25,6 @@ if(!$_SESSION["name"]) {
 
 
 
-#$username='Sales_manager_name'; # for test
 
 $sql = "SELECT * FROM crm_customer ORDER BY customer_id ASC";
 mysqli_query($connection, $sql);
@@ -62,7 +61,7 @@ echo"failed";
 
 <!-- sub header -->
 
-<span class="sub-head">Details</span> <div class="sub-line"></div>
+<span class="sub-head">Customer Details</span> <div class="sub-line"></div>
 
 <span><a href="./phpFunc/functions/businessUser/logout.php"><button class="log_out-button">Logout</button> </a></span>
 
@@ -99,9 +98,19 @@ echo"failed";
    Role :  <?php echo" ". $row_user['roles'] . " ";?> </p>
 </div>
 
-<!--pro view over -->
 
-<a href=#abc><button class="sales-but">
+<!--customer butt-->
+
+<button  class="cus-but">
+
+      <img class="cus-logo" src="./assets/img/cus_det.png">
+      <span class="cus-text">Customer</span> 
+
+</button>
+
+<!-- sales but-->
+
+<a href="./salesView.php"><button class="sales-but">
 
       <img class="sales-logo" src="./assets/img/sales.png">
       <span class="sales-text">Sales </span> 
@@ -110,21 +119,19 @@ echo"failed";
 </button></a>
 
 
+<!--add butt-->
 
+<button onclick="document.getElementById('addform').style.display='block'" class="add-but">
+
+      <img class="add-logo" src="./assets/img/add_cus.png">
+      <span class="add-text">Add</span> 
+
+</button>
 
 
 </div> <!-- menu div -->
 
 <!-- menu over -->
-
-
-<!-- add button -->
-
-<div>
-    <span><button onclick="document.getElementById('addform').style.display='block'" class="add-button">Add</button></span>
-</div>
-
-<!-- add button over -->
 
 
 <!-- adding form -->
