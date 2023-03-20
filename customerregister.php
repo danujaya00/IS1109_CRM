@@ -55,22 +55,16 @@ if (isset($_POST['submit'])) {
         verify_query($result);
 
         if ($result) {
-            echo "<script>alert('Updated successfully');</script>";
-            echo "<script>window.location='index.php";
+            echo "<script>alert('Customer Registered Successfully');</script>";
+            echo "<script>window.location='./customerLogin.php' </script>";
+
         } else {
-            echo "<script>alert('Update failed');</script>";
-            echo "<script>window.location='customerregister.php'</script>";;
+            echo "<script>alert('registration failed');</script>";
+            echo "<script>window.location='./customerLogin.php'</script>";;
         }
     }
-
-    if($result2) {
-        echo "<script>alert('Updated successfully');</script>";
-        echo "<script>window.location='../../../custViewUserDetails.php'</script>";
-    } else {
-        echo "<script>alert('Update failed');</script>";
-        echo "<script>window.location='../../../custViewUserDetails.php'</script>";
     }
-}
+    
 
 ?>
 
@@ -146,7 +140,7 @@ if (isset($_POST['submit'])) {
             style="background-color: white;">
             Male<input type="radio" 
             id="male" 
-            name="F_gender" value="Male">  &nbsp;&nbsp; Female<input type="radio" id="female" name="F_gender"  value="Female">
+            name="F_gender" value="Male">  &nbsp;&nbsp; Female<input type="radio" id="female" name="F_gender"  value="Female" required>
       </div>
 
             <br>
