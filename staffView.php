@@ -7,7 +7,7 @@ if(!($_SESSION["name"] AND $_SESSION["id"] AND $_SESSION["roles"] )) {
   echo "<script>window.location='./index.php'</script>";
 }else{
 
-  if($_SESSION["roles"] !== 'admin') { 
+  if($_SESSION["roles"] !== 'salesman') { 
   
       echo "<script>alert('Invalid Login Request');</script>";
       echo "<script>window.location='./index.php'</script>";
@@ -124,7 +124,7 @@ echo"failed";
 <button onclick="document.getElementById('addform').style.display='block'" class="add-but">
 
       <img class="add-logo" src="./assets/img/add_cus.png">
-      <span class="add-text">Add</span> 
+      <span class="add-text">Add </span> 
 
 </button>
 
@@ -153,37 +153,62 @@ echo"failed";
 
     
       <div class="input-container ic1">
-        <input id="fname" name="f_name" class="input" type="text" placeholder=" " required />
+        <input id="fname" 
+        name="f_name" 
+        class="input" 
+        type="text" 
+        placeholder=" " required />
         <div class="cut"></div>
         <label for="firstname" class="placeholder">First name</label>
       </div>
 
       <div class="input-container ic2">
-        <input id="lastname" name="l_name" class="input" type="text" placeholder=" " required/>
+        <input id="lastname" 
+        name="l_name" 
+        class="input" 
+        type="text" 
+        placeholder=" " required />
         <div class="cut"></div>
         <label for="lastname" class="placeholder">Last name</label>
       </div>
 
       <div class="input-container ic2">
-        <input id="mobie" name="mob" class="input" type="text" placeholder=" "required />
+        <input id="mobie" 
+        name="mob" 
+        class="input" 
+        type="text" 
+        placeholder=" "required 
+        pattern='^\+?\d{0,11}' />
         <div class="cut cut-short"></div>
         <label for="mobieNO" class="placeholder">Mobile</label>
       </div>
 
       <div class="input-container ic2">
-        <input id="email"  name="email" class="input" type="text" placeholder=" " required/>
+        <input id="email"  
+        name="email" 
+        class="input" 
+        type="email" 
+        placeholder=" " required/>
         <div class="cut cut-short"></div>
         <label for="email" class="placeholder">E-mail</label>
       </div>
 
       <div class="input-container ic2">
-        <input id="address"  name="address" class="input" type="text" placeholder=" "required />
+        <input id="address"  
+        name="address" 
+        class="input" 
+        type="text" 
+        placeholder=" "required />
         <div class="cut"></div>
         <label for="address" class="placeholder">&nbsp;Address</label>
       </div>
 
       <div class="input-container ic2">
-        <input id="age"  name="age" class="input" type="text" placeholder=" " required/>
+        <input id="age"  
+        name="age" 
+        class="input" 
+        type="number" 
+        placeholder=" " required/>
         <div class="cut cut-short"></div>
         <label for="age" class="placeholder">&nbsp;&nbsp;Age</label>
       </div>  

@@ -7,7 +7,7 @@ if(!($_SESSION["name"] AND $_SESSION["id"] AND $_SESSION["roles"] )) {
   echo "<script>window.location='./index.php'</script>";
 }else{
 
-  if($_SESSION["roles"] !== 'admin') { 
+  if($_SESSION["roles"] !== 'salesman') { 
   
       echo "<script>alert('Invalid Login Request');</script>";
       echo "<script>window.location='./index.php'</script>";
@@ -27,16 +27,29 @@ if(!($_SESSION["name"] AND $_SESSION["id"] AND $_SESSION["roles"] )) {
 
 
 
-$sql = "SELECT * FROM sales_details ORDER BY purchased_date ASC";
-mysqli_query($connection, $sql);
-$result = mysqli_query($connection,$sql);
+// $sql = "SELECT * FROM sales_details ORDER BY purchased_date ASC";
+// mysqli_query($connection, $sql);
+// $result = mysqli_query($connection,$sql);
+
+// if($result){
+// //echo "Sucessfull";
+// }
+// else{
+// echo"failed";	
+// }
+
+$sql2 = "SELECT d.Sales_ID as s_id , d.customer_id as c_id, concat(c.fname ,' ', c.lname ) as cust_name , d.Product_ID as p_id, d.Purchased_date as pd, p.Product_Name as item, p.Price_per_unit as price  
+FROM sales_details as d , crm_product as p ,crm_customer as c
+where d.Product_ID = p.Product_ID and d.customer_id = c.customer_id order by d.Purchased_date";
+mysqli_query($connection, $sql2);
+$result = mysqli_query($connection,$sql2);
 
 if($result){
-//echo "Sucessfull";
-}
-else{
-echo"failed";	
-}
+  //echo "Sucessfull";
+  }
+  else{
+  echo"failed";	
+  }
 ?>
 
 
@@ -131,19 +144,25 @@ echo"failed";
 <tr bgcolor="#404040"> 
 
 <th>Sales ID</th>
-<th>Product ID</th>
 <th>Customer ID</th>
+<th>Customer Name</th>
+<th>Product ID</th>
+<th>Product Name</th>
+<th>Price</th>
 <th>Purchased Date</th>
 
 </tr>
 <?php
 while ($row = mysqli_fetch_assoc($result)) {
-    echo "
+    echo "  
         <tr bgcolor='#373737'>
-            <td style='height:40px;'>" . $row['Sales_ID'] . "</td>
-            <td>" . $row['Product_ID'] . "</td>
-            <td>" . $row['customer_id'] . "</td>
-            <td>" . $row['Purchased_date'] . "</td>
+            <td style='height:40px;'>" . $row['s_id'] . "</td>
+            <td>" . $row['c_id'] . "</td>
+            <td>" . $row['cust_name'] . "</td>
+            <td>" . $row['p_id'] . "</td>
+            <td>" . $row['item'] . "</td>
+            <td>" . $row['price'] . "</td>
+            <td>" . $row['pd'] . "</td>
         </tr>";
 }
 ?>
