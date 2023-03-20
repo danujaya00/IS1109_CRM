@@ -85,6 +85,7 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
+
 <body>
 
     <div class="wrapper">
@@ -101,28 +102,51 @@ if (isset($_POST['submit'])) {
         ?>
         <form action="customerregister.php" method="post">
             <div class="input-box">
-                <input type="text" name="F_fname" <?php echo 'value="' . $fname . '"'; ?> placeholder="Enter your First Name" required>
+                <input type="text" 
+                name="F_fname" 
+                <?php echo 'value="' . $fname . '"'; ?> 
+                placeholder="Enter your First Name" 
+                required >
             </div>
             <div class="input-box">
-                <input type="text" name="F_lname" <?php echo 'value="' . $lname . '"'; ?> placeholder="Enter your Last Name" required>
+                <input type="text" 
+                name="F_lname" 
+                <?php echo 'value="' . $lname . '"'; ?> 
+                placeholder="Enter your Last Name" 
+                required>
             </div>
             <div class="input-box">
-                <input type="text" name="F_mobile" <?php echo 'value="' . $mobile . '"'; ?> placeholder="Enter your Mobile Number" required>
+                <input type="text" 
+                name="F_mobile" 
+                <?php echo 'value="' . $mobile . '"'; ?> 
+                placeholder="Enter your Mobile Number" 
+                required pattern='^\+?\d{0,11}' >
             </div>
             <div class="input-box">
-                <input type="text" name="F_address" <?php echo 'value="' . $address . '"'; ?> placeholder="Enter your Address" required>
+                <input type="text" 
+                name="F_address" 
+                <?php echo 'value="' . $address . '"'; ?> 
+                placeholder="Enter your Address" 
+                required>
             </div>
             <div class="input-box">
-                <input type="text" name="F_email" <?php echo 'value="' . $email . '"'; ?> placeholder="Enter your Email" required>
+                <input type="email" 
+                name="F_email" <?php echo 'value="' . $email . '"'; ?> 
+                placeholder="Enter your Email"
+                 required  >
             </div>
             <div class="input-box">
-                <input type="number" name="F_age" <?php echo 'value="' . $age . '"'; ?>placeholder="Enter your Age" required>
+                <input type="number" 
+                name="F_age" 
+                <?php echo 'value="' . $age . '"'; ?>
+                placeholder="Enter your Age" 
+                required>
             </div>
-            <!-- <div class="input-box">
-                <input type="text" name="F_gender" <?php echo 'value="' . $gender . '"'; ?> placeholder="Are you a Male or Female" required>
-            </div> -->
-            <div class="radio-dec-box " style="background-color: white;">
-    Male<input type="radio" id="male" name="F_gender" value="Male">  &nbsp;&nbsp; Female<input type="radio" id="female" name="F_gender"  value="Female">
+            <div class="radio-dec-box " 
+            style="background-color: white;">
+            Male<input type="radio" 
+            id="male" 
+            name="F_gender" value="Male">  &nbsp;&nbsp; Female<input type="radio" id="female" name="F_gender"  value="Female">
       </div>
 
             <br>

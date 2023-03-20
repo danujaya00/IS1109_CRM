@@ -7,7 +7,7 @@ if(!($_SESSION["name"] AND $_SESSION["id"] AND $_SESSION["roles"] )) {
   echo "<script>window.location='./index.php'</script>";
 }else{
 
-  if($_SESSION["roles"] !== 'salesman') { 
+  if($_SESSION["roles"] !== 'admin') { 
   
       echo "<script>alert('Invalid Login Request');</script>";
       echo "<script>window.location='./index.php'</script>";
