@@ -89,37 +89,37 @@ echo "<label for='firstname' class='placeholder'>CustomerID</label>";
 echo "</div>";
 
 echo "<div class='input-container ic1'>";
-echo "<input id='fname' name='f_name' class='input' type='text' placeholder=' ' value=".$row['fname']." />";
+echo "<input id='fname' name='f_name' class='input' type='text' placeholder=' ' value=".$row['fname']." required/>";
 echo "<div class='cut'></div>";
 echo "<label for='firstname' class='placeholder'>First name</label>";
 echo "</div>";
 
 echo "<div class='input-container ic2'>";
-echo "<input id='lastname' name='l_name' class='input' type='text' placeholder=' ' value=".$row['lname']." />";
+echo "<input id='lastname' name='l_name' class='input' type='text' placeholder=' ' value=".$row['lname']." required/>";
 echo "<div class='cut'></div>";
 echo "<label for='lastname' class='placeholder'>Last name</label>";
 echo "</div>";
 
 echo "<div class='input-container ic2'>";
-echo "<input id='mobie' name='mob' class='input' type='text' placeholder=' ' required pattern='^\+?\d{0,11}'  value=".$row['mob']." />";
+echo "<input id='mobie' name='mob' class='input' type='text' placeholder=' ' required pattern='^\+?\d{0,11}'  value=".$row['mob']." required/>";
 echo "<div class='cut cut-short'></div>";
 echo "<label for='mobieNO' class='placeholder'>Mobile</label>";
 echo "</div>";
 
 echo "<div class='input-container ic2'>";
-echo "<input id='email'  name='email' class='input' type='email' placeholder=' ' value=".$row['email']." />";
+echo "<input id='email'  name='email' class='input' type='email' placeholder=' ' value=".$row['email']." required/>";
 echo "<div class='cut cut-short'></div>";
 echo "<label for='email' class='placeholder'>E-mail</label>";
 echo "</div>";
 
 echo "<div class='input-container ic2'>";
-echo "<input id='address'  name='address' class='input' type='text' placeholder=' 'value=".$row['address']." />";
+echo "<input id='address'  name='address' class='input' type='text' placeholder=' 'value=".$row['address']." required/>";
 echo "<div class='cut'></div>";
 echo "<label for='address' class='placeholder'>&nbsp;Address</label>";
 echo "</div>";
 
 echo "<div class='input-container ic2'>";
-echo "<input id='age'  name='age' class='input' type='number' placeholder=' ' value=".$row['age']." />";
+echo "<input id='age'  name='age' class='input' type='number' placeholder=' ' value=".$row['age']." required/>";
 echo "<div class='cut cut-short'></div>";
 echo "<label for='age' class='placeholder'>&nbsp;&nbsp;Age</label>";
 echo "</div>";
