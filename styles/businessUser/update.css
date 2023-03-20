@@ -33,7 +33,7 @@ body {
 
 .log_out-button {
     appearance: none;
-    background-color: #005EFF;
+    background-color: #FF4136;
     border: 0px solid #1A1A1A;
     border-radius: 10px;
     box-sizing: border-box;
@@ -42,8 +42,8 @@ body {
     display: inline-block;
     font-family: 'Exo', sans-serif;
     font-size: 16px;
-    width: 100px;
-  height: 55px;
+    width: 120px;
+height: 55px;
     outline: none;
     text-align: center;
     text-decoration: none;
@@ -279,7 +279,7 @@ select{
   margin: -25px 0 0 -25px;
   position: absolute;
   top: 20%;
-  left: 30%;
+  left: 33%;
  
   
 }
@@ -356,7 +356,7 @@ border-radius: 17px;
 
 
 .menu-line{
-  border: 3px solid #202532;
+  border: 1px solid #8C8C8C;
   width:245px;
   position: relative;
   top:175px;
