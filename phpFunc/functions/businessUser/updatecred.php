@@ -23,7 +23,10 @@ if(!($_SESSION["name"] AND $_SESSION["id"] AND $_SESSION["roles"] )) {
 #update user
 
 if(isset($_POST['update_pwd'])){
-    $sql2 = "UPDATE crm_users SET password = '".$_POST['pwd']."' WHERE id = '".$_POST['user_id']."'";
+
+    $epass=sha1($_POST['pwd']);
+
+    $sql2 = "UPDATE crm_users SET password = '".$epass."' WHERE id = '".$_POST['user_id']."'";
     $result2 = mysqli_query($connection,$sql2);
 
     if($result2) {
@@ -36,9 +39,6 @@ if(isset($_POST['update_pwd'])){
     
      
 }
-
-
-
 ?>
 
 

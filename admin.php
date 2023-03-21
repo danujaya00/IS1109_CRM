@@ -141,7 +141,7 @@ $result = mysqli_query($connection,$sql);
 <th>Email</th>
 <th>Role</th>
 <th>Last Login</th>
-<th>Deleted</th>
+
 <th>Update</th>
 <th>Delete</th>
 
@@ -156,7 +156,7 @@ while ($row = mysqli_fetch_assoc($result)) {
             <td>" . $row['email'] . "</td>
             <td>" . $row['roles'] . "</td>
             <td>" . $row['lastLogin'] . "</td>
-            <td>" . $row['deleted'] . "</td>
+
             <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href='./phpFunc/functions/admin/update.php?user_id=".$row['id']."'><button class='edit-button' role='button'>Edit</button> </a>&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td>&nbsp;&nbsp;&nbsp;&nbsp;
             
@@ -203,7 +203,7 @@ while ($row = mysqli_fetch_assoc($result)) {
       </div>
 
       <div class="input-container ic2">
-        <input id="email"  name="email" class="input" type="text" placeholder=" " required/>
+        <input id="email"  name="email" class="input" type="email" placeholder=" " required/>
         <div class="cut cut-short"></div>
         <label for="email" class="placeholder">E-mail</label>
       </div>

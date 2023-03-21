@@ -77,7 +77,7 @@ echo"failed";
 
 <div class="piza-staff"><img class="piza-logo" src="./assets/img/logo.png">
 
-<span class="menu-text" style="color:orange;">PiZzA</span><br><span class="menu-text" style="font-size:28px; color:white; postion:relative; left:100px; bottom:45px;">Staff</span>
+<span class="menu-text" style="color:orange;">PiZzA</span><br><span class="menu-text" style="font-size:28px; color:white; position:relative; left:100px; bottom:45px;">Staff</span>
 
 </div>
 
@@ -340,6 +340,7 @@ echo"failed";
 <th>&nbsp;&nbsp;Age&nbsp;&nbsp;</th>
 <th>&nbsp;&nbsp;Gender&nbsp;&nbsp;</th>
 <th>Update</th>
+<th>Delete</th>
 
 </tr>
 <?php
@@ -355,7 +356,13 @@ while ($row = mysqli_fetch_assoc($result)) {
             <td>" . $row['age'] . "</td>
             <td>" . $row['gender'] . "</td>
             <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href='./phpFunc/functions/businessUser/update.php?customer_id=".$row['customer_id']."'><button class='edit-button' role='button'>Edit</button> </a>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-
+            <td>&nbsp;
+                <button class='edit-button' onclick=\"if(confirm('Warning!\\n \\n &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Are you sure you want to delete this customer:&nbsp;".$row['fname']."')) {
+              window.location='./phpFunc/functions/businessUser/delete.php?customer_id=".$row['customer_id']."';
+          } else {
+              window.location='./salesView.php';
+          }\">Delete</button>
+            &nbsp;</td>
         </tr>";
 }
 ?>

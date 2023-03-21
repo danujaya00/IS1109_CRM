@@ -19,8 +19,8 @@ if(!($_SESSION["name"] AND $_SESSION["id"] AND $_SESSION["roles"] )) {
  
 
   if(isset($_POST['sal_insert'])){
-    
-    $sql = "INSERT INTO crm_users (name,email,password,roles) VALUES ('".$_POST['name']."','".$_POST['email']."','".$_POST['password']."','salesman')";
+    $pw=sha1($_POST['password']);
+    $sql = "INSERT INTO crm_users (name,email,password,roles) VALUES ('".$_POST['name']."','".$_POST['email']."','".$pw."','salesman')";
 
 
 	$result = mysqli_query($connection,$sql);

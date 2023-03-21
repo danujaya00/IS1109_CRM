@@ -44,7 +44,7 @@ $row_user=mysqli_fetch_assoc($result_user);
 #update user
 
 if(isset($_POST['update'])){
-    $sql2 = "UPDATE crm_users SET name = '".$_POST['name']."', email = '".$_POST['email']."', password = '".$_POST['password']."' WHERE id = '".$_POST['user_id']."'";
+    $sql2 = "UPDATE crm_users SET name = '".$_POST['name']."', email = '".$_POST['email']."'  WHERE id = '".$_POST['user_id']."'";
     $result2 = mysqli_query($connection,$sql2);
 
     if($result2) {
@@ -187,11 +187,11 @@ echo "<div class='cut cut-short'></div>";
 echo "<label for='lastname' class='placeholder'>Email</label>";
 echo "</div>";
 
-echo "<div class='input-container ic2'>";
-echo "<input id='lastname' name='password' class='input' type='password' placeholder=' ' value=".$row['password']." required >";
-echo "<div class='cut'></div>";
-echo "<label for='lastname' class='placeholder'>Password</label>";
-echo "</div>";
+// echo "<div class='input-container ic2'>";
+// echo "<input id='lastname' name='password' class='input' type='password' placeholder=' ' value=".$row['password']." required >";
+// echo "<div class='cut'></div>";
+// echo "<label for='lastname' class='placeholder'>Password</label>";
+// echo "</div>";
 
 
 echo "<button type='submit' name='update' class='update-button-admin' role='button'>Update</button>"
