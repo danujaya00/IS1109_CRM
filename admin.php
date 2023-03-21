@@ -110,7 +110,7 @@ $result = mysqli_query($connection,$sql);
 <button  class="cus-but">
 
       <img class="cus-logo" src="./assets/img/cus_det.png">
-      <span class="cus-text">Customer</span> 
+      <span class="cus-text">Customers</span> 
 
 </button>
 </a>

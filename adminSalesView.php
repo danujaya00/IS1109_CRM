@@ -29,10 +29,18 @@ $row_user=mysqli_fetch_assoc($result_user);
 #get users data
 
 
-$sql = "SELECT * FROM crm_users ORDER BY id ASC";
-mysqli_query($connection, $sql);
-$result = mysqli_query($connection,$sql);
+$sql2 = "SELECT d.Sales_ID as s_id , d.customer_id as c_id, concat(c.fname ,' ', c.lname ) as cust_name , d.Product_ID as p_id, d.Purchased_date as pd, p.Product_Name as item, p.Price_per_unit as price  
+FROM sales_details as d , crm_product as p ,crm_customer as c
+where d.Product_ID = p.Product_ID and d.customer_id = c.customer_id order by d.Purchased_date";
+mysqli_query($connection, $sql2);
+$result = mysqli_query($connection,$sql2);
 
+if($result){
+  //echo "Sucessfull";
+  }
+  else{
+  echo"failed";	
+  }
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +66,7 @@ $result = mysqli_query($connection,$sql);
 
 <!-- sub header -->
 
-<span class="sub-head">Customer Details</span> <div class="sub-line"></div>
+<span class="sub-head">Sales Details</span> <div class="sub-line"></div>
 
 <span><a href="./phpFunc/functions/businessUser/logout.php"><button class="log_out-button">Logout</button> </a></span>
 
@@ -96,7 +104,7 @@ $result = mysqli_query($connection,$sql);
 
 
 <!--customer butt-->
-<a href="./adminpages/adminCustomerView.php"><button class="sales-but">
+<a href="./adminCustomerView.php"><button class="sales-but">
 <button  class="cus-but">
 
       <img class="cus-logo" src="./assets/img/cus_det.png">
@@ -106,7 +114,7 @@ $result = mysqli_query($connection,$sql);
 </a>
 <!-- sales but-->
 
-<a href="./adminpages/adminSalesView.php"><button class="sales-but">
+<a href="./adminSalesView.php"><button class="sales-but">
 
       <img class="sales-logo" src="./assets/img/sales.png">
       <span class="sales-text">Sales </span> 
@@ -132,33 +140,30 @@ $result = mysqli_query($connection,$sql);
 
 <!-- user view table -->
 
-<table border="0" class="table_dec">
+<table border="0" class="table_dec2">
 
 <tr bgcolor="#404040"> 
 
-<th>User ID</th>
-<th>Name</th>
-<th>Email</th>
-<th>Role</th>
-<th>Last Login</th>
-<th>Deleted</th>
-<th>Update</th>
-<th>Delete</th>
-
+<th>Sales ID</th>
+<th>Customer ID</th>
+<th>Customer Name</th>
+<th>Product ID</th>
+<th>Product Name</th>
+<th>Price</th>
+<th>Purchased Date</th>
 
 </tr>
 <?php
 while ($row = mysqli_fetch_assoc($result)) {
-    echo "
+    echo "  
         <tr bgcolor='#373737'>
-            <td>" . $row['id'] . "</td>
-            <td>" . $row['name'] . "</td>
-            <td>" . $row['email'] . "</td>
-            <td>" . $row['roles'] . "</td>
-            <td>" . $row['lastLogin'] . "</td>
-            <td>" . $row['deleted'] . "</td>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href='./phpFunc/functions/admin/update.php?user_id=".$row['id']."'><button class='edit-button' role='button'>Edit</button> </a>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href='./phpFunc/functions/admin/update.php?user_id=".$row['id']."'><button class='edit-button' role='button'>Delete</button> </a>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td style='height:40px;'>" . $row['s_id'] . "</td>
+            <td>" . $row['c_id'] . "</td>
+            <td>" . $row['cust_name'] . "</td>
+            <td>" . $row['p_id'] . "</td>
+            <td>" . $row['item'] . "</td>
+            <td>" . $row['price'] . "</td>
+            <td>" . $row['pd'] . "</td>
         </tr>";
 }
 ?>
