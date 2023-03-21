@@ -94,16 +94,6 @@ $result = mysqli_query($connection,$sql);
    Role :  <?php echo" ". $row_user['roles'] . " ";?> </p>
 </div>
 
-<!-- staff view button start  -->
-<!-- <a href="./admin.php"><button class="sales-but">
-<button  class="cus-but">
-
-      <img class="cus-logo" src="./assets/img/pro_avatar.png">
-      <span class="cus-text">staff</span> 
-
-</button>
-</a> -->
-<!-- staff view button over -->
 
 <!--customer butt-->
 <a href="./adminCustomerView.php"><button class="sales-but">
@@ -168,7 +158,20 @@ while ($row = mysqli_fetch_assoc($result)) {
             <td>" . $row['lastLogin'] . "</td>
             <td>" . $row['deleted'] . "</td>
             <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href='./phpFunc/functions/admin/update.php?user_id=".$row['id']."'><button class='edit-button' role='button'>Edit</button> </a>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href='./phpFunc/functions/admin/update.php?user_id=".$row['id']."'><button class='edit-button' role='button'>Delete</button> </a>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;
+            
+           
+          <button class='edit-button' onclick=\"if(confirm('Warning!\\n \\n &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Are you sure you want to delete this user:&nbsp;".$row['name']."')) {
+              window.location='./phpFunc/functions/admin/delete.php?user_id=".$row['id']."';
+          } else {
+              window.location='./admin.php';
+          }\">Delete</button>
+
+
+    
+
+
+            &nbsp;&nbsp;&nbsp;&nbsp;</td>
         </tr>";
 }
 ?>
@@ -228,7 +231,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 
 
-<!-- script for get the modal -->
+<!-- script for get the pro view -->
 
 <script>
 var coll = document.getElementsByClassName("pro-view");
