@@ -59,6 +59,7 @@ if($result){
 <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="./styles/businessUser/main.css" rel="stylesheet">
+        <link href="./styles/businessUser/add.css" rel="stylesheet">
         <title>Sales View</title>
         
 </head>
@@ -132,17 +133,97 @@ if($result){
 <!-- this should send the user to edit user details page -->
 <!-- businessUser/updatecred.php -->
 
-<button class="up-but">
-      <span class="up-text">Update User Details</span> 
+<!-- businessUser/updatecred.php -->
 
-</button> 
+<button class="up-but"  style="top:515px;"onclick="document.getElementById('updatePwd').style.display='block'"  >
+<img class="up-logo" src="./assets/img/pwd.png">
+<span class="up-text">Update User<br><span style="position:relative; left:23px;"> Details</span></span>  
+      
+
+</button>  
 
 
 </div> <!-- menu div -->
 
 <!-- menu over -->
 
+<!-- update pwd salesman -->
 
+
+
+<div id="updatePwd" class="formbox-update">
+
+<form class="formbox-content-update animate" action="./phpFunc/functions/businessUser/updatecred.php" method="post" onsubmit="return checkPwd()">
+
+<span onclick="document.getElementById('updatePwd').style.display='none'" class="close-update"><img  class="close-image-update" src="./assets/img/close.png"></span>
+   
+<div style="padding:5px;">
+
+
+<div class="input-pos">
+
+<div class="title">Update Password</div><div class="line-dec"></div><br>
+
+<div class="subtitle"><p id="password-error" style="color: red; display: none;">Passwords do not match!</p></div>
+
+    
+      <div class="input-container ic1">
+        <input id="password" 
+        name="pwd" 
+        class="input" 
+        type="password" 
+        placeholder=" " required />
+        <div class="cut"></div>
+        <label for="firstname" class="placeholder">Password</label>
+      </div>
+
+      <div class="input-container ic1">
+        <input id="retype-password" 
+        name="re-pwd" 
+        class="input" 
+        type="password" 
+        placeholder=" " required />
+        <div class="cut"></div>
+        <label for="firstname" class="placeholder">Retype Password</label>
+      </div>
+
+      <input type="hidden" name="user_id" value="<?php echo $_SESSION["id"];?>">
+
+      <button class="form-button-update"  type="submit" name="update_pwd">UPDATE</button>
+
+</div>
+  
+    <br><br><br><br><br>
+     </div>
+</form>
+
+<!-- check pwd -->
+<script>
+
+  function checkPwd() {
+  var password = document.getElementById("password").value;
+  var retypePassword = document.getElementById("retype-password").value;
+  var passwordError = document.getElementById("password-error");
+
+  
+    if (password !== retypePassword) {
+      passwordError.style.display = "block";
+      return false;
+      
+
+    } else {
+      passwordError.style.display = "none";
+      return true;
+     
+    }
+  }
+  
+</script>
+
+
+</div>
+
+<!-- update pwd  form over -->
 
 <!-- user view table -->
 

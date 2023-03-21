@@ -312,21 +312,7 @@ height: 82px;
   border-radius: 17px;
 }
 
-.up-but{
-  position: absolute;
-  width: 200px;
-  height: 82px;
-  left: 23px;
-  top: 625px;
-  outline:0;
-  border:0;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-  background: #0F151C;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 17px;
-}
+
 
 
 .add-but:disabled {
@@ -363,15 +349,7 @@ height: 82px;
   cursor:default;
 }
 
-.up-text{
-  font-family: "Montserrat", sans-serif;
-  font-size:20px;
-  position:relative;
-  bottom:20px;
-  top:18px;
-  color:white;
-  cursor:default;
-}
+
 
 
 /*Customer menu button*/
@@ -471,6 +449,57 @@ height: 82px;
   position:relative;
   bottom:20px;
   left:-25px;
+  color:white;
+  cursor:default;
+}
+
+/* menu pwd update button */
+
+
+.up-but{
+  position: absolute;
+  width: 200px;
+  height: 82px;
+  left: 23px;
+  top: 620px;
+  outline:0;
+  border:0;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  background: #0F151C;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 17px;
+}
+
+.up-but:disabled {
+  pointer-events: none;
+}
+
+.up-logo{
+  height: auto;
+  width: 60px;
+  position: relative;
+  left:-0px;
+  top:9px;
+}
+
+.up-but:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  background-color: #121124;
+  transform: translateY(-2px);
+}
+
+.up-but:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.up-text{
+  font-family: "Montserrat", sans-serif;
+  font-size:18px;
+  position:relative;
+  top:-20px;
   color:white;
   cursor:default;
 }
