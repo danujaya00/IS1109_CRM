@@ -100,20 +100,6 @@ if(isset($_POST['update'])){
 
  <div class="menu-line"></div>
 
-  <!-- pro view start -->
-<button class="pro-view">
-
-
-      <img class="pro-avatar" src="../../../assets/img/pro_avatar.png">
-      <span class="pro-text">Profile </span> 
-
-</button>
-
-<div id="content-box" class="content">
-<p>First Name:  <?php echo $_SESSION["name"]; ?><br><br>
-   Email : <?php echo" ". $row_user['email'] . " ";?><br><br>
-   Role :  <?php echo" ". $row_user['roles'] . " ";?> </p>
-</div>
 
 
 <div style="position:relative; top:105px;"> <!-- div for space for staff button-->
@@ -149,6 +135,22 @@ if(isset($_POST['update'])){
 
 </button>
 </a>
+
+
+  <!-- pro view start -->
+  <button class="pro-view">
+
+
+<img class="pro-avatar" src="../../../assets/img/pro_avatar.png">
+<span class="pro-text">Profile </span> 
+
+</button>
+
+<div id="content-box" class="content">
+<p>First Name:  <?php echo $_SESSION["name"]; ?><br><br>
+Email : <?php echo" ". $row_user['email'] . " ";?><br><br>
+Role :  <?php echo" ". $row_user['roles'] . " ";?> </p>
+</div>
 
 
 </div> <!-- menu div -->
