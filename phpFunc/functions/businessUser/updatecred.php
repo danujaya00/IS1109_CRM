@@ -28,10 +28,10 @@ if(isset($_POST['update_pwd'])){
 
     if($result2) {
         echo "<script>alert('Updated successfully');</script>";
-        echo "<script>window.location='../../../admin.php'</script>";
+        echo "<script>window.location='../../../staffView.php'</script>";
     } else {
         echo "<script>alert('Update failed');</script>";
-        echo "<script>window.location='../../../admin.php'</script>";
+        echo "<script>window.location='../../../staffView.php'</script>";
     }
     
      
