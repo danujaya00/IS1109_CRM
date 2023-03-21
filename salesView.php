@@ -129,6 +129,13 @@ if($result){
 
 </button></a>
 
+<!-- this should send the user to edit user details page -->
+<!-- businessUser/updatecred.php -->
+
+<button class="up-but">
+      <span class="up-text">Update User Details</span> 
+
+</button> 
 
 
 </div> <!-- menu div -->

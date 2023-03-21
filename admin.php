@@ -73,7 +73,7 @@ $result = mysqli_query($connection,$sql);
 
 <div class="piza-staff"><img class="piza-logo" src="./assets/img/logo.png">
 
-<span class="menu-text" style="color:orange;">PiZzA</span><br><span class="menu-text" style="font-size:25px; color:white; postion:relative; left:90px; bottom:45px;">Admin</span>
+<span class="menu-text" style="color:orange;">PiZzA</span><br><span class="menu-text" style="font-size:25px; color:white; position:relative; left:90px; bottom:45px;">Admin</span>
 
 </div>
 
