@@ -101,11 +101,11 @@ echo"failed";
 
 
 <!--customer butt-->
-<a href="./admin.php"><button class="sales-but">
-<button  class="cus-but">
+<a href="./admin.php"><button class="staff-but">
 
-      <img class="cus-logo" src="./assets/img/pro_avatar.png">
-      <span class="cus-text"> &nbsp;&nbsp;staff</span> 
+
+      <img class="staff-logo" src="./assets/img/staff.png">
+      <span class="staff-text"> &nbsp;&nbsp;Staff</span> 
 
 </button>
 </a>
@@ -171,8 +171,60 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 </table>
 
+
+
 <!-- user view table over -->
-<!-- user view table over -->
+
+<!-- add form -->
+
+<div id="addform" class="formbox">
+
+<form class="formbox-content animate" action="./phpFunc/functions/admin/insert.php" method="post">
+
+<span onclick="document.getElementById('addform').style.display='none'" class="close-admin"><img  class="close-image-admin" src="./assets/img/close.png"></span>
+   
+<div style="padding:5px;">
+
+
+<div class="input-pos">
+
+<div class="title">Add a Salesman</div><div class="line-dec"></div><br>
+
+<div class="subtitle"></div> <!-- no subttle added -->
+
+    
+      <div class="input-container ic1">
+        <input id="fname" name="name" class="input" type="text" placeholder=" " required />
+        <div class="cut"></div>
+        <label for="firstname" class="placeholder">Name</label>
+      </div>
+
+      <div class="input-container ic2">
+        <input id="email"  name="email" class="input" type="text" placeholder=" " required/>
+        <div class="cut cut-short"></div>
+        <label for="email" class="placeholder">E-mail</label>
+      </div>
+
+      <div class="input-container ic2">
+        <input id="password"  name="password" class="input" type="password" placeholder=" "required />
+        <div class="cut"></div>
+        <label for="password" class="placeholder">Password</label>
+      </div>
+
+
+      <button class="form-button"  type="submit" name="sal_insert">ADD</button>
+
+</div>
+  
+    <br><br><br><br><br>
+     </div>
+</form>
+
+
+
+</div>
+
+<!-- adding  form over -->
 
 
 

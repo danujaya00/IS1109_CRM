@@ -266,7 +266,24 @@ input[type="text"], input[type="password"] {
     height: auto;
   }
 
+  .close-image-admin{
+    width: 10%;
+    height: auto;
+
+  }
+
+  .close-admin{
+    position: relative;
+    bottom:200px;
+    left:90%;
+  }
+
+
   .close:hover {
+    transform: translateY(-1px);
+  }
+
+  .close-admin:hover {
     transform: translateY(-1px);
   }
 

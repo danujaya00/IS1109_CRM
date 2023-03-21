@@ -102,6 +102,7 @@ if($result){
    Role :  <?php echo" ". $row_user['roles'] . " ";?> </p>
 </div>
 
+<div style="position:relative; top:105px;"> <!-- div for space for staff button-->
 
 <!--customer butt-->
 <a href="./adminCustomerView.php"><button class="sales-but">
@@ -125,12 +126,26 @@ if($result){
 
 <!--add butt-->
 
+
 <button onclick="document.getElementById('addform').style.display='block'" class="add-but">
 
       <img class="add-logo" src="./assets/img/add_cus.png">
       <span class="add-text">Add</span> 
 
+</button> 
+
+</div>
+
+<!-- staff button-->
+
+<a href="./admin.php"><button class="staff-but">
+
+
+      <img class="staff-logo" src="./assets/img/staff.png">
+      <span class="staff-text"> &nbsp;&nbsp;Staff</span> 
+
 </button>
+</a>
 
 
 </div> <!-- menu div -->
@@ -172,6 +187,56 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 <!-- user view table over -->
 
+<!-- add form -->
+
+<div id="addform" class="formbox">
+
+<form class="formbox-content animate" action="./phpFunc/functions/admin/insert.php" method="post">
+
+<span onclick="document.getElementById('addform').style.display='none'" class="close-admin"><img  class="close-image-admin" src="./assets/img/close.png"></span>
+   
+<div style="padding:5px;">
+
+
+<div class="input-pos">
+
+<div class="title">Add a Salesman</div><div class="line-dec"></div><br>
+
+<div class="subtitle"></div> <!-- no subttle added -->
+
+    
+      <div class="input-container ic1">
+        <input id="fname" name="name" class="input" type="text" placeholder=" " required />
+        <div class="cut"></div>
+        <label for="firstname" class="placeholder">Name</label>
+      </div>
+
+      <div class="input-container ic2">
+        <input id="email"  name="email" class="input" type="text" placeholder=" " required/>
+        <div class="cut cut-short"></div>
+        <label for="email" class="placeholder">E-mail</label>
+      </div>
+
+      <div class="input-container ic2">
+        <input id="password"  name="password" class="input" type="password" placeholder=" "required />
+        <div class="cut"></div>
+        <label for="password" class="placeholder">Password</label>
+      </div>
+
+
+      <button class="form-button"  type="submit" name="sal_insert">ADD</button>
+
+</div>
+  
+    <br><br><br><br><br>
+     </div>
+</form>
+
+
+
+</div>
+
+<!-- adding  form over -->
 
 
 

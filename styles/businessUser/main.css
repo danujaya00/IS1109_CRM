@@ -397,6 +397,57 @@ height: 82px;
   cursor:default;
 }
 
+
+/*Menu staff button*/
+
+.staff-but{
+  position: absolute;
+  width: 200px;
+  height: 82px;
+  left: 23px;
+  top: 305px;
+  outline:0;
+  border:0;
+
+  background: #0F151C;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 17px;
+}
+
+.staff-but:disabled {
+  pointer-events: none;
+}
+
+.staff-but:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  background-color: #121124;
+  transform: translateY(-2px);
+}
+
+.staff-but:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+
+.staff-logo{
+  height: auto;
+  width: 60px;
+  position: relative;
+  left:-28px;
+  top:1px;
+}
+
+.staff-text{
+  font-family: "Montserrat", sans-serif;
+  font-size:23px;
+  position:relative;
+  bottom:20px;
+  left:-25px;
+  color:white;
+  cursor:default;
+}
+
 /*  Edit button */
 
 .edit-button {

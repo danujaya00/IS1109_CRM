@@ -132,7 +132,7 @@ $result = mysqli_query($connection,$sql);
       <img class="add-logo" src="./assets/img/add_cus.png">
       <span class="add-text">Add</span> 
 
-</button>
+</button>  
 
 
 </div> <!-- menu div -->
@@ -177,6 +177,54 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 <!-- user view table over -->
 
+<div id="addform" class="formbox">
+
+<form class="formbox-content animate" action="./phpFunc/functions/admin/insert.php" method="post">
+
+<span onclick="document.getElementById('addform').style.display='none'" class="close-admin"><img  class="close-image-admin" src="./assets/img/close.png"></span>
+   
+<div style="padding:5px;">
+
+
+<div class="input-pos">
+
+<div class="title">Add a Salesman</div><div class="line-dec"></div><br>
+
+<div class="subtitle"></div> <!-- no subttle added -->
+
+    
+      <div class="input-container ic1">
+        <input id="fname" name="name" class="input" type="text" placeholder=" " required />
+        <div class="cut"></div>
+        <label for="firstname" class="placeholder">Name</label>
+      </div>
+
+      <div class="input-container ic2">
+        <input id="email"  name="email" class="input" type="text" placeholder=" " required/>
+        <div class="cut cut-short"></div>
+        <label for="email" class="placeholder">E-mail</label>
+      </div>
+
+      <div class="input-container ic2">
+        <input id="password"  name="password" class="input" type="password" placeholder=" "required />
+        <div class="cut"></div>
+        <label for="password" class="placeholder">Password</label>
+      </div>
+
+
+      <button class="form-button"  type="submit" name="sal_insert">ADD</button>
+
+</div>
+  
+    <br><br><br><br><br>
+     </div>
+</form>
+
+
+
+</div>
+
+<!-- adding  form over -->
 
 
 
