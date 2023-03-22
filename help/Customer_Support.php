@@ -27,6 +27,35 @@ body{
     left:32%;
 }
 
+.faq-box{
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  top:100px;
+  left:30px;
+  width: 500px;
+  height:330px;
+  font-size:20px;
+  background: #EFF2F7;
+  border-radius: 12px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding-left:30px;
+  }
+
+  .faq-pos{
+  position:relative;
+  bottom:200px;
+  width:800px;
+  height:auto;
+  left:40%;
+  top:-227px;
+  background: #EFF2F7;
+  border-radius: 12px;
+  padding-left:50px;
+  padding-top:30px;
+  padding-bottom:30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
 
 
 </style>
@@ -93,7 +122,7 @@ body{
 
 <button type="button" class="pro-view">
 
-      <span class="pro-text" id="customer">3.Get your purchase history</span> 
+      <span class="pro-text" id="purchase">3.Get your purchase history</span> 
 
 </button>
 
@@ -109,7 +138,7 @@ body{
 
 <button type="button" class="pro-view">
 
-      <span class="pro-text" id="staff">4. Know more about your staff </span> 
+      <span class="pro-text" id="details">4. Know more about your staff </span> 
 
 </button>
 
@@ -123,7 +152,7 @@ body{
 
 <button type="button" class="pro-view">
 
-      <span class="pro-text" id="updel">5.Update your profile details</span> 
+      <span class="pro-text" id="update">5.Update your profile details</span> 
 
 </button>
 
