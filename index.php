@@ -4,6 +4,7 @@
 <head>
   <link rel="stylesheet" href="./styles/loginstyles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>PiZzA</title>
 </head>
 
@@ -18,6 +19,7 @@
           <input type=button onClick="parent.location='./loginStaff.php'" class="homebutton" value='Staff Login'>
           <br /><br />
           <input type=button onClick="parent.location='./customerLogin.php'" class="homebutton" style="background-color: gray;" value='Customer'>
+          <a href="./help/helpcenter.php" class="help"><i class="fa-sharp fa-solid fa-circle-info "></i>&nbsp;Need Help?</a>
           </div>
       </form>
     </div>
