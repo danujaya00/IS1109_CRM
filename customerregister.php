@@ -7,6 +7,7 @@
 $errors = array();
 $fname = '';
 $lname = '';
+$username = '';
 $mobile = '';
 $address = '';
 $email = '';
@@ -17,6 +18,7 @@ if (isset($_POST['submit'])) {
 
     $fname = $_POST['F_fname'];
     $lname = $_POST['F_lname'];
+    $username = $_POST['F_username'];
     $mobile = $_POST['F_mobile'];
     $address = $_POST['F_address'];
     $email = $_POST['F_email'];
@@ -24,11 +26,11 @@ if (isset($_POST['submit'])) {
     $gender = $_POST['F_gender'];
 
     // checking required fields
-    $req_fields = array('F_fname', 'F_lname', 'F_mobile', 'F_address', 'F_email', 'F_age', 'F_gender');
+    $req_fields = array('F_fname', 'F_lname', 'F_mobile', 'F_username', 'F_address', 'F_email', 'F_age', 'F_gender');
     $errors = array_merge($errors, check_req_fields($req_fields));
 
     // checking max length
-    $max_len_fields = array('F_fname' => 15, 'F_lname' => 15, 'F_mobile' => 11, 'F_address' => 50, 'F_email' => 50, 'F_age' => 11, 'F_gender' => 6);
+    $max_len_fields = array('F_fname' => 15, 'F_lname' => 15, 'f_suername'=>20, 'F_mobile' => 11, 'F_address' => 50, 'F_email' => 50, 'F_age' => 11, 'F_gender' => 6);
     $errors = array_merge($errors, check_max_len($max_len_fields));
 
     // checking email address
@@ -41,6 +43,7 @@ if (isset($_POST['submit'])) {
 
         $fname = mysqli_real_escape_string($connection, $_POST['F_fname']);
         $lname = mysqli_real_escape_string($connection, $_POST['F_lname']);
+        $username = mysqli_real_escape_string($connection, $_POST['F_username']);
         $mobile = mysqli_real_escape_string($connection, $_POST['F_mobile']);
         $email = mysqli_real_escape_string($connection, $_POST['F_email']);
         $address = mysqli_real_escape_string($connection, $_POST['F_address']);
@@ -49,7 +52,7 @@ if (isset($_POST['submit'])) {
 
 
 
-        $query = "INSERT INTO crm_customer ( fname, lname, mob, address, email, age, gender) VALUES('{$fname}', '{$lname}', '{$mobile}', '{$address}', '{$email}', '{$age}', '{$gender}')";
+        $query = "INSERT INTO crm_customer ( fname, lname, username, mob, address, email, age, gender) VALUES('{$fname}', '{$lname}', '{$username}' , '{$mobile}', '{$address}', '{$email}', '{$age}', '{$gender}')";
 
         $result = mysqli_query($connection, $query);
         verify_query($result);
@@ -107,6 +110,13 @@ if (isset($_POST['submit'])) {
                 name="F_lname" 
                 <?php echo 'value="' . $lname . '"'; ?> 
                 placeholder="Enter your Last Name" 
+                required>
+            </div>
+            <div class="input-box">
+                <input type="text" 
+                name="F_username"" 
+                <?php echo 'value="' . $username . '"'; ?> 
+                placeholder="Enter your Username" 
                 required>
             </div>
             <div class="input-box">

@@ -86,7 +86,7 @@ if(isset($_POST['update'])){
 
 <div class="piza-staff"><img class="piza-logo" src="../../../assets/img/logo.png">
 
-<span class="menu-text" style="color:orange;">PiZzA</span><br><span class="menu-text" style="font-size:28px; color:white; postion:relative; left:100px; bottom:45px;">Staff</span>
+<span class="menu-text" style="color:orange;">PiZzA</span><br><span class="menu-text" style="font-size:28px; color:white; position:relative; left:100px; bottom:45px;">Staff</span>
 
 </div>
 

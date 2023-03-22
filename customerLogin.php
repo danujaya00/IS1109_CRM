@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
         //query to check if the user is in the database
 
         $query = "SELECT * FROM crm_customer 
-						WHERE fname = '{$username}' 
+						WHERE username = '{$username}' 
 						AND mob = '{$password}' 
 						LIMIT 1";
 
@@ -90,7 +90,7 @@ if (isset($_POST['submit'])) {
             }
             ?>
             <div class="input-box">
-                <input type="text" name="username" placeholder="Enter your First Name" required>
+                <input type="text" name="username" placeholder="Enter your User Name" required>
             </div>
             <div class="input-box">
                 <input type="password" name="password" placeholder="Enter your Mobile Number" required>

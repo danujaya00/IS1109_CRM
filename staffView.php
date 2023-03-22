@@ -181,6 +181,15 @@ echo"failed";
         <div class="cut"></div>
         <label for="lastname" class="placeholder">Last name</label>
       </div>
+      <div class="input-container ic2">
+        <input id="username" 
+        name="username" 
+        class="input" 
+        type="text" 
+        placeholder=" " required />
+        <div class="cut"></div>
+        <label for="username" class="placeholder">Username</label>
+      </div>
 
       <div class="input-container ic2">
         <input id="mobie" 
@@ -334,7 +343,8 @@ echo"failed";
 <th>Customer ID</th>
 <th>First Name</th>
 <th>Last Name</th>
-<th>Mobile</th>
+<th>Username</th>
+
 <th>Address</th>
 <th>E-mail</th>
 <th>&nbsp;&nbsp;Age&nbsp;&nbsp;</th>
@@ -350,7 +360,7 @@ while ($row = mysqli_fetch_assoc($result)) {
             <td>" . $row['customer_id'] . "</td>
             <td>" . $row['fname'] . "</td>
             <td>" . $row['lname'] . "</td>
-            <td>" . $row['mob'] . "</td>
+            <td>" . $row['username'] . "</td>
             <td>" . $row['address'] . "</td>
             <td>" . $row['email'] . "</td>
             <td>" . $row['age'] . "</td>
