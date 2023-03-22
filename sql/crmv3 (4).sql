@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 21, 2023 at 03:29 AM
+-- Generation Time: Mar 22, 2023 at 02:11 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -31,6 +31,7 @@ CREATE TABLE `crm_customer` (
   `customer_id` int(11) NOT NULL,
   `fname` varchar(15) NOT NULL,
   `lname` varchar(15) NOT NULL,
+  `username` varchar(20) NOT NULL,
   `mob` int(11) NOT NULL,
   `address` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
@@ -42,20 +43,8 @@ CREATE TABLE `crm_customer` (
 -- Dumping data for table `crm_customer`
 --
 
-INSERT INTO `crm_customer` (`customer_id`, `fname`, `lname`, `mob`, `address`, `email`, `age`, `gender`) VALUES
-(1, 'Tharindu', 'Liyanage', 123456789, 'kuliyapitiya', 'abc@gmail.com', 20, 'Male'),
-(2, 'leo', 'asd', 342545, 'addwefv', 'effet@gmail.com', 54, 'male'),
-(3, 'nbb', 'jak', 366885, 'frhgrigrgkgg', 'rgrgrgt', 25, 'Female'),
-(10, 'danujaya', 'sandeepa', 762918042, 'pandura', 'danujaya@xyz.com', 22, 'male'),
-(11, 'sanath', 'jayasooriya', 100, 'australia', 'sanath@gmail.com', 50, 'male'),
-(13, 'test', 'customer', 1111, 'testtest', 'test@gmail.com', 11, 'male'),
-(14, 'tehan', 'perera', 111, 'colombo', 'tehan@gmail.com', 21, 'Male'),
-(15, 'akesh', 'perera', 123, 'kurunegala', 'akes@gmail.com', 21, 'male'),
-(16, 'test1', 'lname', 111, 'test', 'test@gmail.com', 22, 'Male'),
-(17, 'pramith', 'piyamantha', 772903494, 'colombo', 'pramith@gmail.com', 22, 'Male'),
-(18, 'ravindu', 'kavishka', 1111111111, 'kuliyapitiya', 'ravindu@gmail.com', 22, 'Male'),
-(19, 'savindu', 'kavishka', 1111111111, 'kuliyapitiya', 'savindu@gmail.com', 22, 'Male'),
-(20, 'nethmi', 'liyanagee', 1111111111, 'kuliyapitiya', 'nethmi@gmail.co', 18, 'Female');
+INSERT INTO `crm_customer` (`customer_id`, `fname`, `lname`, `username`, `mob`, `address`, `email`, `age`, `gender`) VALUES
+(16, 'test1', 'lname', 'test1cust', 111, 'test', 'test@gmail.com', 22, 'Male');
 
 -- --------------------------------------------------------
 
@@ -114,9 +103,8 @@ CREATE TABLE `crm_users` (
 --
 
 INSERT INTO `crm_users` (`id`, `name`, `email`, `password`, `roles`, `lastLogin`, `deleted`) VALUES
-(5, 'dee', 'danujayaadmin@xyz.com', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'admin', '2023-03-21 07:45:34', 0),
-(7, 'danu', 'danu@admin.com', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'admin', '2023-03-12 11:53:55', 0),
-(8, 'shika shika', 'shikastaff@gmail.com', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'salesman', '2023-03-20 23:48:35', 0);
+(5, 'dee', 'danujayaadmin@xyz.com', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'admin', '2023-03-21 18:53:26', 0),
+(8, 'shika shika', 'shikastaff@gmail.com', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'salesman', '2023-03-22 06:33:06', 0);
 
 -- --------------------------------------------------------
 
@@ -136,7 +124,6 @@ CREATE TABLE `sales_details` (
 --
 
 INSERT INTO `sales_details` (`Sales_ID`, `Product_ID`, `customer_id`, `Purchased_date`) VALUES
-(3, 5, 10, '2023-03-16'),
 (4, 2, 16, '2023-03-15'),
 (5, 1, 16, '2023-03-15'),
 (6, 6, 16, '2023-03-17');
@@ -185,7 +172,7 @@ ALTER TABLE `sales_details`
 -- AUTO_INCREMENT for table `crm_customer`
 --
 ALTER TABLE `crm_customer`
-  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `crm_product`
@@ -197,7 +184,7 @@ ALTER TABLE `crm_product`
 -- AUTO_INCREMENT for table `crm_users`
 --
 ALTER TABLE `crm_users`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `sales_details`
