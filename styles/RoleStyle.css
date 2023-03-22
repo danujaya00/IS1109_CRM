@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    box-sizing: border-box;
+    font-size: 57.5%;
+}
+body{
+    background-color: #f3e0e2;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.heading{
+    color: orange;
+    font-weight: 700;
+    font-size: 4rem;
+    padding: .5rem;
+}
+.grid{
+    display: grid;
+    width: 110em;
+    grid-gap:3.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem,2fr));
+    align-items: start;
+}
+.grid-item{
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgba(0, 0 ,0, 0.1);
+    cursor:pointer;
+    transition: 0.2s;
+}
+.grid-item:hover{
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+}
+.card-img{
+    display:block;
+    width:100%;
+    height:20rem;
+    object-fit:cover;
+}
+.card-content{
+    padding: 3rem;
+}
+.card-header{
+    margin-top: 1.5rem;
+    font-size: 3rem;
+    font-weight: 600;
+    color:#507F80;
+    margin-bottom: 1.5rem;
+}
+.card-text{
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.5;
+    color: #3d3d3d;
+    margin-bottom: 2.0rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.card-btn{
+    display: block;
+
+    font-size:2rem;
+    text-align:center;
+    color: #eee;
+    background-color: #367E7F;
+    border: none;
+    border-radius: 3.5rem;
+    transition: 0.2s;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+}
+.card-btn span{
+    margin-left:1rem;
+    transition: 0.2s;
+}
+.card-btn:hover,
+.card-btn:active{
+    background-color: #507F80;
+}
+.card-btn:hover span,
+.card-btn:active span{
+    margin-left: 1.5rem;
+}
+@media only screen and (max-width: 768px){
+    body{
+        padding: 3rem;
+    }
+    .grid{
+        grid-gap:3rem;
+    }
+}

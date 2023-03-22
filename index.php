@@ -14,13 +14,16 @@
       <form>
         <h1>Welcome to <span style="font-size: 80px; color:orange; ">PiZzA</span></h1>
         <h5>The biggest pizza shop in Colombo</h5>
-        <br><br>
+        
         <div>
           <input type=button onClick="parent.location='./loginStaff.php'" class="homebutton" value='Staff Login'>
-          <br /><br />
+          <br />
           <input type=button onClick="parent.location='./customerLogin.php'" class="homebutton" style="background-color: gray;" value='Customer'>
-          <a href="./help/helpcenter.php" class="help"><i class="fa-sharp fa-solid fa-circle-info "></i>&nbsp;Need Help?</a>
-          </div>
+          <a href="./help/helpcenter.php" class="help"><i class="fa-sharp fa-solid fa-circle-info "></i>&nbsp;Need Help?</a><br>
+          &nbsp; &nbsp; &nbsp;<a href="./Roles.html" class="help"><i class="fa fa-tasks" aria-hidden="true"></i>
+&nbsp;Functionalities</a>
+          
+        </div>
       </form>
     </div>
     <div class="overlay-container">
