@@ -54,13 +54,13 @@ body{
   <br>
     <center style="font-size:30px;">FAQ:</center> <br>
     
-    <a href="#login">1.Log in</a> <br><br>
-    <a href="#profile">2.Navigate through your profile details </a> <br><br>
-    <a href="#customer">3.Know more about your customers</a> <br><br>
-    <a href="#staff">4.Know more about your staff</a> <br><br>
-    <a href="#updel">5.Update and delete staff details</a>  <br><br>
-    <a href="#sales">6.View sales details</a>  <br><br>
-    <a href="#add">7.Add new records of employees </a> <br><br>
+    <a href="#">1.Log in</a> <br><br>
+    <a href="#">2.Navigate through your profile details </a> <br><br>
+    <a href="#">3.Know more about your customers</a> <br><br>
+    <a href="#">4.Know more about your staff</a> <br><br>
+    <a href="#">5.Update and delete staff details</a>  <br><br>
+    <a href="#">6.View sales details</a>  <br><br>
+    <a href="#">7.Add new records of employees </a> <br><br>
 
     </div>  
     <!--log in-->

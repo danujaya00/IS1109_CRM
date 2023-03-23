@@ -79,11 +79,11 @@ body{
   <br>
     <center style="font-size:30px;">FAQ:</center> <br>
     
-    <a href="#login">1.Log in</a> <br><br>
-    <a href="#profile">2.Know your First name and the registered email </a> <br><br>
-    <a href="#purchase">3.Know more about your purchases</a> <br><br>
-    <a href="#details">4.Know more about your profile</a> <br><br>
-    <a href="#update">5.Update your profile deatails</a> <br><br>
+    <a href="#">1.Log in</a> <br><br>
+    <a href="#">2.Know your First name and the registered email </a> <br><br>
+    <a href="#">3.Know more about your purchases</a> <br><br>
+    <a href="#">4.Know more about your profile</a> <br><br>
+    <a href="#">5.Update your profile deatails</a> <br><br>
 
     </div> 
 
@@ -99,10 +99,10 @@ body{
 </button>
 
 <div class="content">
-<p> Step 01: Enter your First Name
+<p>  Step 01: Enter your Username
     <br><br>
     Step 02: Enter your mobile number as the password
-    Once you click on the "Log in" button, you will be redirected to the Admin home page.</p>
+    Once you click on the "Log in" button, you will be redirected to the customer home page.</p>
 </div>
 
 <br>
