@@ -12,11 +12,18 @@
 
 body{
     font-family: "Montserrat", sans-serif;
+<<<<<<< Updated upstream
     background: linear-gradient(180deg, #EFF2F7 23%, #FFFFFF 23%);
     height: 200vh;
     overflow-x: hidden;
     
+=======
+    background: linear-gradient(180deg, #EFF2F7 28%, #FFFFFF 28%);
+    height:140vh;
+   
+>>>>>>> Stashed changes
     
+       
 }
 
 .headline-line{
@@ -26,6 +33,13 @@ body{
     top:-10px;
     left:34.5%;
 }
+
+.faq-box{
+  
+ 
+  height:425px;
+ 
+  }
 
 
 
@@ -41,11 +55,12 @@ body{
 
 
 <div class="home-icon-pos">
-<i onclick="window.location.href='../index.php';"  class="fa-solid fa-house fa-2x home-color"></i>
+<i onclick="window.location.href='../index.php';"  class="fa-solid fa-house fa-3x home-color"></i>
 </div>
 
+<div class="logo">
 <a href="./helpcenter.php">
-<span class="logo-text">PiZzA</span><span class="small-title">Help<span style="color:#5875E6" >Center</span></span></a>
+<span class="logo-text">PiZzA</span><span class="small-title">Help<span style="color:#5875E6" >Center</span></span></a> </div>
 
 <p class="headline" style="font-size:60px;">Admin Support</p> <div class="headline-line"></div>
     

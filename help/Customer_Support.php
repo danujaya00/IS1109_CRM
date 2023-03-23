@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/helpcenter/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Customer Support</title>
@@ -12,9 +11,14 @@
 
 body{
     font-family: "Montserrat", sans-serif;
+<<<<<<< Updated upstream
     background: linear-gradient(180deg, #EFF2F7 23%, #FFFFFF 23%);
     height: 200vh;
     overflow-x: hidden;
+=======
+    background: linear-gradient(180deg, #EFF2F7 33%, #FFFFFF 33%);
+    height:120vh;
+>>>>>>> Stashed changes
     
     
 }
@@ -28,32 +32,17 @@ body{
 }
 
 .faq-box{
-  font-family: "Montserrat", sans-serif;
-  position: relative;
-  top:100px;
+
   left:30px;
   width: 500px;
   height:330px;
-  font-size:20px;
-  background: #EFF2F7;
-  border-radius: 12px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding-left:30px;
   }
 
+
   .faq-pos{
-  position:relative;
-  bottom:200px;
-  width:800px;
-  height:auto;
-  left:40%;
-  top:-227px;
-  background: #EFF2F7;
-  border-radius: 12px;
-  padding-left:50px;
-  padding-top:30px;
-  padding-bottom:30px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+top: 366px;
+
   }
 
 
@@ -65,11 +54,12 @@ body{
 <body>
 
 <div class="home-icon-pos">
-<i onclick="window.location.href='../index.php';"  class="fa-solid fa-house fa-2x home-color"></i>
+<i onclick="window.location.href='../index.php';"  class="fa-solid fa-house fa-3x home-color"></i>
 </div>
 
+<div class="logo">
 <a href="./helpcenter.php">
-<span class="logo-text">PiZzA</span><span class="small-title">Help<span style="color:#5875E6" >Center</span></span></a>
+<span class="logo-text">PiZzA</span><span class="small-title">Help<span style="color:#5875E6" >Center</span></span></a> </div>
 
 <p class="headline" style="font-size:60px;">Customer Support</p> <div class="headline-line"></div>
 

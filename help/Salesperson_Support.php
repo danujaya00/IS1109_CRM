@@ -12,9 +12,14 @@
 
 body{
     font-family: "Montserrat", sans-serif;
+<<<<<<< Updated upstream
     background: linear-gradient(180deg, #EFF2F7 23%, #FFFFFF 23%);
     height: 200vh;
     overflow-x: hidden;
+=======
+    background: linear-gradient(180deg, #EFF2F7 33%, #FFFFFF 33%);
+height:125vh;
+>>>>>>> Stashed changes
     
     
 }
@@ -36,18 +41,19 @@ body{
 <body>
 
 <div class="home-icon-pos">
-<i onclick="window.location.href='../index.php';"  class="fa-solid fa-house fa-2x home-color"></i>
+<i onclick="window.location.href='../index.php';"  class="fa-solid fa-house fa-3x home-color"></i>
 </div>
 
+<div class="logo">
 <a href="./helpcenter.php">
-<span class="logo-text">PiZzA</span><span class="small-title">Help<span style="color:#5875E6" >Center</span></span></a>
+<span class="logo-text">PiZzA</span><span class="small-title">Help<span style="color:#5875E6" >Center</span></span></a> </div>
 
 <p class="headline" style="font-size:60px;">Salesperson Support</p> <div class="headline-line"></div>
 
 
 <div class="faq-box">
   <br>
-    <center style="font-size:30px;">FAQ:</center> <br>
+    <div class="center-text">How To&nbsp;:</div> <br><br><br>
     
     <a href="#login">1.Log in</a> <br><br>
     <a href="#profile">2.Navigate through your profile details </a> <br><br>
