@@ -12,14 +12,8 @@
 
 body{
     font-family: "Montserrat", sans-serif;
-<<<<<<< Updated upstream
-    background: linear-gradient(180deg, #EFF2F7 23%, #FFFFFF 23%);
-    height: 200vh;
-    overflow-x: hidden;
-=======
     background: linear-gradient(180deg, #EFF2F7 33%, #FFFFFF 33%);
 height:125vh;
->>>>>>> Stashed changes
     
     
 }
