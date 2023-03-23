@@ -103,7 +103,7 @@ echo"failed";
 <a href='./custViewUserDetails.php'><button class="sales-but">
 
       <img class="sales-logo" src="./assets/img/sales.png">
-      <span class="sales-text" style="font-size: large;">Details </span> 
+      <span class="sales-text" style="font-size: large;"> My Details </span> 
 
 
 </button></a>

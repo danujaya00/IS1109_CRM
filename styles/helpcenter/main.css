@@ -9,9 +9,8 @@ html{
 body{
     font-family: "Montserrat", sans-serif;
     background: linear-gradient(180deg, #EFF2F7 43%, #FFFFFF 43%);
-
-    overflow-x: hidden;
-    overflow-y: hidden  ;
+    
+    overflow:auto
     
     
     
@@ -19,6 +18,8 @@ body{
 
 a{
   text-decoration: none;
+  color: black;
+  
 }
 
 .home-icon-pos{

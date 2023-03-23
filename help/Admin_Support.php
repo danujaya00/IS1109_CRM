@@ -13,7 +13,6 @@
 body{
     font-family: "Montserrat", sans-serif;
     background: linear-gradient(180deg, #EFF2F7 23%, #FFFFFF 23%);
-    height: 200vh;
     overflow-x: hidden;
     
     
