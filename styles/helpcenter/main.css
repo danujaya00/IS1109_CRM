@@ -9,8 +9,7 @@ html{
 body{
     font-family: "Montserrat", sans-serif;
     background: linear-gradient(180deg, #EFF2F7 43%, #FFFFFF 43%);
-    
-    overflow:auto
+    margin-bottom: 10px;
     
     
     
@@ -18,22 +17,16 @@ body{
 
 a{
   text-decoration: none;
-  color: black;
-  
 }
 
 .home-icon-pos{
-    position: relative;
-    top:30px;
-    left:90%;
-    padding: none;
+    position:absolute;
+    top:37px;
+    left:93%;
+    z-index:2;
 }
 
-.home-color:hover{
-    color: #F65655;
-    transform: translateY(-2px);
 
-}
 
 i:hover{
     color: #F65655; 
@@ -54,12 +47,12 @@ i:hover{
 
 .img{
     z-index: -1;
-    width:700px;
+    width:600px;
     height: auto;
     opacity: 0.2;
-    position: relative;
-    left:27%;
-    top:-40px;
+    position: absolute;
+    left:30%;
+    top:213px;
 }
 
 .small-title{
@@ -94,7 +87,7 @@ border: none;
 position: absolute;
 width: 350px;
 height: 369px;
-left: 300px;
+left: 150px;
 top: 330px;
 
 background: #FFFFFF;
@@ -142,7 +135,7 @@ border-radius: 12px;
     position: absolute;
     width: 350px;
     height: 369px;
-    left: 750px;
+    left: 600px;
     top: 330px;
     
     background: #FFFFFF;
@@ -173,7 +166,7 @@ border-radius: 12px;
     position: absolute;
     width: 350px;
     height: 369px;
-    left: 1200px;
+    left: 1050px;
     top: 330px;
     
     background: #FFFFFF;
@@ -265,7 +258,7 @@ border-radius: 12px;
   top:100px;
   left:60px;
   width: 425px;
-  height:425px;
+  height:400px;
   font-size:20px;
   background: #EFF2F7;
   border-radius: 12px;
@@ -276,18 +269,32 @@ border-radius: 12px;
   
   
   .faq-pos{
-  position:relative;
-  bottom:500px;
-  width:800px;
-  height:auto;
-  left:40%;
-  top:-330px;
-  background: #EFF2F7;
-  border-radius: 12px;
-  padding-left:50px;
-  padding-top:30px;
-  padding-bottom:30px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width:800px;
+ position: absolute;
+left: 40%;
+top: 366px;
+background: #EFF2F7;
+border-radius: 12px;
+padding-left: 50px;
+padding-top: 30px;
+padding-bottom: 43px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
-  
+
+  .center-text{
+position:absolute;
+left:145px;
+    font-size:35px;
+  }
     
+.logo{
+  position:relative;
+  top:36px;
+
+}
+
+.card-pos{
+  position: absolute;
+  top:-30px;
+  left:-9px;
+}

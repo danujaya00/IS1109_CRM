@@ -19,7 +19,7 @@
           <input type=button onClick="parent.location='./loginStaff.php'" class="homebutton" value='Staff Login'>
           <br />
           <input type=button onClick="parent.location='./customerLogin.php'" class="homebutton" style="background-color: gray;" value='Customer'>
-          <a href="./help/helpcenter.php" class="help"><i class="fa-sharp fa-solid fa-circle-info "></i>&nbsp;Need Help?</a><br>
+          <a href="./help/helpcenter.html" class="help"><i class="fa-sharp fa-solid fa-circle-info "></i>&nbsp;Need Help?</a><br>
           &nbsp; &nbsp; &nbsp;<a href="./Roles.html" class="help"><i class="fa fa-tasks" aria-hidden="true"></i>
 &nbsp;Functionalities</a>
           
@@ -35,5 +35,4 @@
     </div>
   </div>
 </body>
-
 </html>
