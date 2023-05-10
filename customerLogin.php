@@ -66,14 +66,16 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/customerstyles.css">
+    <title>PiZzA - Customer Login</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./styles/customerstyles.css">
+    <!-- <link rel="stylesheet" href="./styles/loginstyles.css"> -->
 </head>
 
 <body>
 
-    <div class="wrapper">
+    <div class="wrapper-cust">
         <a style="background-color: white; " href="./index.php"><i style="font-size:xxx-large; background-color:white;   " class="material-icons">keyboard_backspace</i></a>
         <h1>Customer Login
         </h1>

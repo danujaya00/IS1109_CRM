@@ -1,24 +1,23 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
 
 * {
-  background-color: #f3e0e2;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
 
 body {
+  background-image: url('../assets/img/pizza_background_orange_t60.png');
+ 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: "Montserrat", sans-serif;
   height: 100vh;
   margin: -20px 0 50px;
   overflow-y: hidden;
-
 }
 
-
-.wrapper {
+.wrapper-cust {
   position: relative;
   max-width: 500px;
   width: 100%;
@@ -29,7 +28,7 @@ body {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.wrapper h1 {
+.wrapper-cust h1 {
   position: relative;
   font-size: 40px;
   text-align: center;
@@ -37,26 +36,21 @@ body {
   background-color: white;
   color: #333;
 }
-.wrapper form {
+.wrapper-cust form {
   margin-top: 30px;
   background-color: white;
 }
-.wrapper form .input-box {
+.wrapper-cust form .input-box {
   height: 52px;
   margin: 18px 0;
 }
 form .input-box input {
-  background-color: white;
-  height: 100%;
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
   width: 100%;
-  padding: 0 15px;
-  font-size: 17px;
-  font-weight: 400;
-  color: #333;
-  border: 1.5px solid #c7bebe;
-  border-bottom-width: 2.5px;
-  border-radius: 6px;
-  /* transition: all 0.3s ease; */
+  transition: all 80ms ease-in;
 }
 
 .input-box.button input {
@@ -65,6 +59,7 @@ form .input-box input {
   border: none;
   background: #4070f4;
   cursor: pointer;
+  transition: all 80ms ease-in;
 }
 form .text h3 {
   background-color: white;
@@ -98,8 +93,4 @@ button {
   padding: 12px 45px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  transition: transform 80ms ease-in;
 }
-/* radio-dec-box{
-  background-color: white;
-} */

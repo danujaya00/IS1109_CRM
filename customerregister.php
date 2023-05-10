@@ -85,7 +85,7 @@ if (isset($_POST['submit'])) {
 
 <body>
 
-    <div class="wrapper">
+    <div class="wrapper-cust">
         <a style="background-color: white; " href="./index.php"><i style="font-size:xxx-large; background-color:white;   " class="material-icons">keyboard_backspace</i></a>
 
         <h1>Register Yourself

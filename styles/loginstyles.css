@@ -1,3 +1,4 @@
+/* Login Styles */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
 
 * {
@@ -5,7 +6,8 @@
 }
 
 body {
-  background: #f3e0e2;
+  background-image: url('../assets/img/pizza_background_orange_t60.png');
+  /* background: #f3e0e2; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,7 +72,7 @@ input {
   padding: 12px 15px;
   margin: 8px 0;
   width: 100%;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in;
 }
 
 .container {
@@ -103,7 +105,10 @@ input {
   width: 50%;
   height: 100%;
 }
-
+.overlay-image{
+  height: 500px;
+  width: 500px;
+}
 .overlay {
   background: #ff416c;
   background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
@@ -111,7 +116,6 @@ input {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
-  color: #ffffff;
   position: relative;
   left: -100%;
   height: 100%;
