@@ -53,9 +53,9 @@ if (isset($_POST['logIn'])) {
 			verify_query($result_set);
 
 			// redirect to admin.php and staffView.php
-			if($_SESSION["roles"] == 'salesman'){
+			if ($_SESSION["roles"] == 'salesman') {
 				header('Location: ./staffView.php');
-			}elseif(($_SESSION["roles"] == 'admin')){
+			} elseif (($_SESSION["roles"] == 'admin')) {
 				header('Location: ./admin.php');
 			}
 		} else {
@@ -82,11 +82,11 @@ if (isset($_POST['logIn'])) {
 		<div class="form-container log-in-container">
 
 			<form action="loginStaff.php" method="post">
-					<a style="background-color: white; " href="./index.php"><i style="font-size:xxx-large; background-color:white;   " class="material-icons">keyboard_backspace</i></a>
-				<h1>Login</h1>
-
-				<span>or use your account</span>
-				<br><br>
+				<a style="background-color: white; " href="./index.php"><i style="font-size:xxx-large; background-color:white;   " class="material-icons">keyboard_backspace</i></a>
+				<h1>Staff Login</h1>	
+				<br>
+				<span>Use the registered email and password to login.</span>
+				<br>
 				<?php
 				if (isset($errors)) {
 					echo '<p class="error">Invalid Username / Password</p>';
@@ -98,8 +98,8 @@ if (isset($_POST['logIn'])) {
 					echo '<p class="info">You have successfully logged out from the system</p>';
 				}
 				?>
-				<input type="text" name="username" placeholder="Email" />
-				<input type="password" name="password" placeholder="Password" />
+				<input type="text" name="username" placeholder="Email" required/>
+				<input type="password" name="password" placeholder="Password" required/>
 				<br>
 				<button type="submit" name="logIn">Log In</button>
 			</form>
@@ -107,7 +107,7 @@ if (isset($_POST['logIn'])) {
 		<div class="overlay-container">
 			<div class="overlay">
 				<div class="overlay-panel overlay-right">
-					<img  class="overlay-image" src="./assets/img/pizza-logo-image-ornage.png">
+					<img class="overlay-image" src="./assets/img/pizza-logo-image-ornage.png">
 				</div>
 			</div>
 		</div>

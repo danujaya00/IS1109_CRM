@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
     $errors = array_merge($errors, check_req_fields($req_fields));
 
     // checking max length
-    $max_len_fields = array('F_fname' => 15, 'F_lname' => 15, 'f_suername'=>20, 'F_mobile' => 11, 'F_address' => 50, 'F_email' => 50, 'F_age' => 11, 'F_gender' => 6);
+    $max_len_fields = array('F_fname' => 15, 'F_lname' => 15, 'f_suername' => 20, 'F_mobile' => 11, 'F_address' => 50, 'F_email' => 50, 'F_age' => 11, 'F_gender' => 6);
     $errors = array_merge($errors, check_max_len($max_len_fields));
 
     // checking email address
@@ -60,14 +60,13 @@ if (isset($_POST['submit'])) {
         if ($result) {
             echo "<script>alert('Customer Registered Successfully');</script>";
             echo "<script>window.location='./customerLogin.php' </script>";
-
         } else {
             echo "<script>alert('registration failed');</script>";
             echo "<script>window.location='./customerLogin.php'</script>";;
         }
     }
-    }
-    
+}
+
 
 ?>
 
@@ -77,7 +76,7 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/customerstyles.css">
+    <link rel="stylesheet" href="./styles/loginStyles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -85,11 +84,7 @@ if (isset($_POST['submit'])) {
 
 <body>
 
-    <div class="wrapper-cust">
-        <a style="background-color: white; " href="./index.php"><i style="font-size:xxx-large; background-color:white;   " class="material-icons">keyboard_backspace</i></a>
-
-        <h1>Register Yourself
-        </h1>
+    <div class="wrapper-customer-register">
         <?php
 
         if (!empty($errors)) {
@@ -98,68 +93,42 @@ if (isset($_POST['submit'])) {
 
         ?>
         <form action="customerregister.php" method="post">
-            <div class="input-box">
-                <input type="text" 
-                name="F_fname" 
-                <?php echo 'value="' . $fname . '"'; ?> 
-                placeholder="Enter your First Name" 
-                required >
-            </div>
-            <div class="input-box">
-                <input type="text" 
-                name="F_lname" 
-                <?php echo 'value="' . $lname . '"'; ?> 
-                placeholder="Enter your Last Name" 
-                required>
-            </div>
-            <div class="input-box">
-                <input type="text" 
-                name="F_username"" 
+            <a style="background-color: white; " href="./index.php"><i style="font-size:xxx-large; background-color:white;   " class="material-icons">keyboard_backspace</i></a>
+
+            <h1>Register Yourself
+            </h1>
+            <br>
+            <input type="text" name="F_fname" <?php echo 'value="' . $fname . '"'; ?> placeholder="First Name" required>
+
+            <input type="text" name="F_lname" <?php echo 'value="' . $lname . '"'; ?> placeholder="Last Name" required>
+
+            <input type="text" name="F_username"" 
                 <?php echo 'value="' . $username . '"'; ?> 
-                placeholder="Enter your Username" 
-                required>
+                placeholder=" Username" required>
+
+            <input type="text" name="F_mobile" <?php echo 'value="' . $mobile . '"'; ?> placeholder="Mobile Number" required pattern='^\+?\d{0,11}'>
+
+            <input type="text" name="F_address" <?php echo 'value="' . $address . '"'; ?> placeholder="Address" required>
+
+            <input type="email" name="F_email" <?php echo 'value="' . $email . '"'; ?> placeholder="Email" required>
+
+            <input type="number" name="F_age" <?php echo 'value="' . $age . '"'; ?> placeholder="Age" required>
+            <br>
+            <div class="radio">
+                <div class="row radio-button">
+                    <div class="column radio-button">
+                        Male&nbsp;&nbsp;<input type="radio" id="male" name="F_gender" value="Male"> </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="column radio-button">
+                        Female&nbsp;&nbsp;<input type="radio" id="female" name="F_gender" value="Female" required></div>
+                </div>
             </div>
-            <div class="input-box">
-                <input type="text" 
-                name="F_mobile" 
-                <?php echo 'value="' . $mobile . '"'; ?> 
-                placeholder="Enter your Mobile Number" 
-                required pattern='^\+?\d{0,11}' >
-            </div>
-            <div class="input-box">
-                <input type="text" 
-                name="F_address" 
-                <?php echo 'value="' . $address . '"'; ?> 
-                placeholder="Enter your Address" 
-                required>
-            </div>
-            <div class="input-box">
-                <input type="email" 
-                name="F_email" <?php echo 'value="' . $email . '"'; ?> 
-                placeholder="Enter your Email"
-                 required  >
-            </div>
-            <div class="input-box">
-                <input type="number" 
-                name="F_age" 
-                <?php echo 'value="' . $age . '"'; ?>
-                placeholder="Enter your Age" 
-                required>
-            </div>
-            <div class="radio-dec-box " 
-            style="background-color: white;">
-            Male<input type="radio" 
-            id="male" 
-            name="F_gender" value="Male">  &nbsp;&nbsp; Female<input type="radio" id="female" name="F_gender"  value="Female" required>
-      </div>
 
             <br>
             <div class="btn"><button type="submit" name="submit">Register</button></div>
-            <br>
 
-            <div class="text" style="background-color:white">
+            <div class="foot-text" style="background-color:white">
                 <h3>Already Registered? <br>
-                    <a href="./customerLogin.php">Login now</a>
+                    <span><a href="./loginCustomer.php">Login now</a></span>    
                 </h3>
             </div>
         </form>
