@@ -93,7 +93,7 @@ if (isset($_POST['submit'])) {
 
         ?>
         <form action="customerregister.php" method="post">
-            <a style="background-color: white; " href="./index.php"><i style="font-size:xxx-large; background-color:white;   " class="material-icons">keyboard_backspace</i></a>
+            <a style="background-color: white; " href="./index.php"><i style="font-size:xx-large; color:#ff4b2b; background-color:white;   " class="material-icons">keyboard_backspace</i></a>
 
             <h1>Register Yourself
             </h1>

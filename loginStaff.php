@@ -82,7 +82,7 @@ if (isset($_POST['logIn'])) {
 		<div class="form-container log-in-container">
 
 			<form action="loginStaff.php" method="post">
-				<a style="background-color: white; " href="./index.php"><i style="font-size:xxx-large; background-color:white;   " class="material-icons">keyboard_backspace</i></a>
+				<a style="background-color: white; " href="./index.php"><i style="font-size:xx-large; color:#ff4b2b; background-color:white;   " class="material-icons">keyboard_backspace</i></a>
 				<h1>Staff Login</h1>	
 				<br>
 				<span>Use the registered email and password to login.</span>
