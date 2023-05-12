@@ -128,7 +128,7 @@ if (isset($_POST['submit'])) {
 
             <div class="foot-text" style="background-color:white">
                 <h3>Already Registered? <br>
-                    <span><a href="./loginCustomer.php">Login now</a></span>    
+                    <span><a href="./Login/logincustomer.php">Login now</a></span>    
                 </h3>
             </div>
         </form>

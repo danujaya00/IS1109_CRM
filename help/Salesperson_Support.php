@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/helpcenter/main.css">
+    <link rel="stylesheet" href="../styles/helpcenter/helpcenter.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Salesperson Support</title>
 
@@ -49,17 +49,15 @@ body{
   <br>
     <center style="font-size:30px;">FAQ:</center> <br>
     
-    <a href="#">1.Log in</a> <br><br>
-    <a href="#">2.Navigate through your profile details </a> <br><br>
-    <a href="#">3.Know more about your customers</a> <br><br>
-    <a href="#">4.Update Customer detailsf</a> <br><br>
-    <a href="#">5.View sales details</a>  <br><br>
-    <a href="#">6.Add a customer</a>  <br><br>
+    <a href="#">1.How to Log in</a> <br><br>
+    <a href="#">2.How to Navigate through your profile details </a> <br><br>
+    <a href="#">3.How to Know more about your customers</a> <br><br>
+    <a href="#">4.How to Update Customer details</a> <br><br>
+    <a href="#">5.How to View sales details</a>  <br><br>
+    <a href="#">6.How to Add a customer</a>  <br><br>
 
     </div>  
-
-
-
+    
  <!-- faq -->
 
 <div class="faq-pos">

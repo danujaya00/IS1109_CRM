@@ -13,9 +13,8 @@
     <div class="form-container log-in-container">
       <form>
         <h1>Welcome to <span class="logo-text">PiZzA</span></h1>
-        <h5>The biggest pizza shop in Colombo</h5><br>
-
-        <div>
+        <h5 >The biggest pizza shop in Colombo</h5><br>
+        <div class="mt-30">
           <input type=button onClick="parent.location='./loginStaff.php'" class="homebutton" value='Staff Login'>
           <br />
           <input type=button onClick="parent.location='./loginCustomer.php'" class="homebutton" style="background-color: gray;" value='Customer'>

@@ -89,7 +89,7 @@ if (isset($_POST['logIn'])) {
 				<br>
 				<?php
 				if (isset($errors)) {
-					echo '<p class="error">Invalid Username / Password</p>';
+					echo '<p class="warning-messege">Invalid Username / Password</p>';
 				}
 				?>
 

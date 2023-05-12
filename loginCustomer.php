@@ -73,7 +73,7 @@ if (isset($_POST['submit'])) {
 	<div class="container" id="container">
 		<div class="form-container log-in-container">
 
-		<form action="customerLogin.php" method="post">
+		<form action="loginCustomer.php" method="post">
 		<a style="background-color: white; " href="./index.php"><i style="font-size:xx-large; color:#ff4b2b; background-color:white;   " class="material-icons">keyboard_backspace</i></a>
 				<h1>Customer Login</h1>
 				<br>
@@ -81,7 +81,7 @@ if (isset($_POST['submit'])) {
 				<br>
             <?php
             if (isset($errors)) {
-                echo '<p class="error">Invalid Username / Mobile Number</p>';
+                echo '<p class="warning-messege">Invalid Username / Mobile Number</p>';
             }
             ?>
 
