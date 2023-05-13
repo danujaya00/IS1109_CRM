@@ -77,6 +77,11 @@ i:hover {
   position: relative;
   top: 40px;
 }
+.headline-page{
+  font-size: 40px;
+  text-align: center;
+  position: relative;
+}
 
 .headline-line {
   border-bottom: solid 5px #5875e6;
@@ -211,7 +216,7 @@ pro -view button + content */
   outline: none;
   font-size: 15px;
 
-  background-color: white;
+  background-color: #eff2f7;
 }
 
 .pro-text {
@@ -257,13 +262,13 @@ pro -view button + content */
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: white;
+  background-color: #eff2f7;
 }
 
 .faq-box {
   font-family: "Montserrat", sans-serif;
   position: relative;
-  top: 100px;
+  top: 0px;
   left: 60px;
   width: 425px;
   height: 425px;
@@ -280,7 +285,7 @@ pro -view button + content */
   width: 800px;
   height: auto;
   left: 40%;
-  top: -330px;
+  top: -425px;
   background: #eff2f7;
   border-radius: 12px;
   padding-left: 50px;
