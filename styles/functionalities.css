@@ -97,3 +97,10 @@ body{
         grid-gap:3rem;
     }
 }
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    /* width: 50%; */
+  }

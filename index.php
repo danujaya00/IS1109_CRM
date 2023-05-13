@@ -19,7 +19,7 @@
           <br />
           <input type=button onClick="parent.location='./loginCustomer.php'" class="homebutton" style="background-color: gray;" value='Customer'>
           <a href="./help/helpcenter.php" class="help"><i class="fa-sharp fa-solid fa-circle-info "></i>&nbsp;Need Help?</a><br>
-          &nbsp; &nbsp; &nbsp;<a href="./Roles.html" class="help"><i class="fa fa-tasks" aria-hidden="true"></i>
+          &nbsp; &nbsp; &nbsp;<a href="./functionalities.html" class="help"><i class="fa fa-tasks" aria-hidden="true"></i>
             &nbsp;Functionalities</a>
 
         </div>
