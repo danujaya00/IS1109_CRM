@@ -18,9 +18,9 @@ a {
   text-decoration: none;
   color: black;
 }
-hr{
-  
-}
+/* hr{
+  height: 3px;
+} */
 
 .home-icon-pos {
   position: relative;
