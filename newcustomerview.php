@@ -87,7 +87,61 @@ if ($result) {
         </div>
     </div>
     <div class="body-layout">
+        <!-- user view table -->
 
+        <div class="details-container">
+            <h1 class=" ">Your Details</h1>
+            <hr>
+            <table class=" flex-centered user-details">
+                <?php
+                $row = mysqli_fetch_assoc($result);
+                echo "
+                <tr>
+                    <td class='item'> Customer Id</td>
+                    <td class='colon'> : </td>
+                    <td class='value'>" . $row['customer_id'] . "</td>
+                </tr>
+                <tr>
+                    <td class='item'> First Name</td>
+                    <td class='colon'> : </td>
+                    <td class='value'>" . $row['fname'] . "</td>
+                </tr>
+                <tr>
+                    <td class='item'> Last Name</td>
+                    <td class='colon'> : </td>
+                    <td class='value'>" . $row['lname'] . "</td>
+                </tr>
+                <tr>
+                    <td class='item'> Mobile</td>
+                    <td class='colon'> : </td>
+                    <td class='value'>" . $row['mob'] . "</td>
+                </tr>
+                <tr>
+                    <td class='item'> Address</td>
+                    <td class='colon'> : </td>
+                    <td class='value'>" . $row['address'] . "</td>
+                </tr>
+                <tr>
+                    <td class='item'> Email</td>
+                    <td class='colon'> : </td>
+                    <td class='value'>" . $row['email'] . "</td>
+                </tr>
+                <tr>
+                    <td class='item'> Age</td>
+                    <td class='colon'> : </td>
+                    <td class='value'>" . $row['age'] . "</td>
+                </tr>
+                <tr>
+                    <td class='item'> Gender</td>
+                    <td class='colon'> : </td>
+                    <td class='value'>" . $row['gender'] . "</td>
+                    
+                 </tr>
+                <tr> <td colspan='3'><a href='./phpFunc/functions/customer/update.php?customer_id=" . $row['customer_id'] . "'><button class='edit-button' role='button'>Edit</button> </a></td> </tr>   ";
+
+                ?>
+            </table>
+        </div>
     </div>
     <!-- script for get the modal -->
 
