@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
             verify_query($result_set);
 
             // redirect to admin.php
-            header('Location: custViewUserDetails.php');
+            header('Location: customerview.php');
         } else {
             $errors[] = 'Invalid Username / MobileNo';
         }
@@ -56,31 +56,32 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-
-
-
-
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/customerstyles.css">
+    <title>PiZzA - Customer Login</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- <link rel="stylesheet" href="./styles/customerstyles.css"> -->
+    <link rel="stylesheet" href="./styles/loginstyles.css">
 </head>
 
 <body>
+	<div class="container" id="container">
+		<div class="form-container log-in-container">
 
-    <div class="wrapper">
-        <a style="background-color: white; " href="./index.php"><i style="font-size:xxx-large; background-color:white;   " class="material-icons">keyboard_backspace</i></a>
-        <h1>Customer Login
-        </h1>
-        <form action="customerLogin.php" method="post">
+		<form action="loginCustomer.php" method="post">
+		<a style="background-color: white; " href="./index.php"><i style="font-size:xx-large; color:#ff4b2b; background-color:white;   " class="material-icons">keyboard_backspace</i></a>
+				<h1>Customer Login</h1>
+				<br>
+				<span>Use the registered email and password to login.</span>
+				<br>
             <?php
             if (isset($errors)) {
-                echo '<p class="error">Invalid Username / Mobile Number</p>';
+                echo '<p class="warning-messege">Invalid Username / Mobile Number</p>';
             }
             ?>
 
@@ -89,23 +90,28 @@ if (isset($_POST['submit'])) {
                 echo '<p class="info">You have successfully logged out from the system</p>';
             }
             ?>
-            <div class="input-box">
-                <input type="text" name="username" placeholder="Enter your User Name" required>
-            </div>
-            <div class="input-box">
-                <input type="password" name="password" placeholder="Enter your Mobile Number" required>
-            </div>
+
+                <input type="text" name="username" placeholder="Username" required>
+
+                <input type="password" name="password" placeholder="Mobile Number" required>
             <br>
             <div class="btn"><button type="submit" name="submit">Log In</button></div>
             <br>
-            <div class="text" style="background-color:white">
+            <div class="foot-text" style="background-color:white">
                 <h3>Not a Registered Customer? <br>
                     <a href="./customerregister.php">Register Now</a>
                 </h3>
             </div>
         </form>
-    </div>
-    </div>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-right">
+					<img  class="overlay-image" src="./assets/img/pizza-logo-image-ornage.png">
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
