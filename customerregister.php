@@ -79,6 +79,9 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="./styles/loginStyles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body{overflow-y: auto;}
+    </style>
 </head>
 
 
