@@ -57,6 +57,7 @@ if ($result) {
          margin-left: 10%;
          margin-top: 5%;
          margin-bottom: 5%;
+        
         }
         </style>
 </head>
