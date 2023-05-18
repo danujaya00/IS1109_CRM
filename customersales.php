@@ -1,5 +1,7 @@
 <?php require_once('./phpFunc/connection/connect.php');
 
+
+
 session_start();
 
 if (!$_SESSION["name"]) {

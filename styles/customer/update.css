@@ -4,6 +4,7 @@
 body {
   background-image: url("../../assets/img/pizza_background.png");
   height: 100vh;
+  overflow: hidden;
 }
 .main-div{
   display: flex;
@@ -204,7 +205,7 @@ select {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   overflow: hidden;
   width: 500px;
-  min-height: 630px;
+  min-height: 670px;
   position: absolute;
   top: 10%;
   display: flex;

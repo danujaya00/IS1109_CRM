@@ -8,29 +8,6 @@
 		}
 	}
 
-    // checks required fields
-	function check_req_fields($req_fields) {
-		$errors = array();		
-		foreach ($req_fields as $field) {
-			$trimVal = trim($_POST[$field]);
-			if (empty($trimVal)) {
-				$errors[] = $field . ' is required';
-			}
-		}
-		return $errors;
-	}
-
-    // checks max length
-	function check_max_len($max_len_fields) {
-		$errors = array();
-
-		foreach ($max_len_fields as $field => $max_len) {
-			if (strlen(trim($_POST[$field])) > $max_len) {
-				$errors[] = $field . ' must be less than ' . $max_len . ' characters';
-			}
-		}
-		return $errors;
-	}
 
     // displays form errors
 	function display_errors($errors) {

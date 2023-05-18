@@ -1,5 +1,6 @@
 <?php require_once('../../connection/connect.php');
 
+
 session_start();
 
 
@@ -26,10 +27,10 @@ if (isset($_POST['update'])) {
 
     if ($result2) {
         echo "<script>alert('Updated successfully');</script>";
-        echo "<script>window.location='../../../custViewUserDetails.php'</script>";
+        echo "<script>window.location='../../../customerView.php'</script>";
     } else {
         echo "<script>alert('Update failed');</script>";
-        echo "<script>window.location='../../../custViewUserDetails.php'</script>";
+        echo "<script>window.location='../../../customerView.php'</script>";
     }
 }
 
@@ -90,6 +91,13 @@ if (isset($_POST['update'])) {
                             echo "<div class='cut'></div>";
                             echo "<label for='lastname' class='placeholder'>Last name</label>";
                             echo "</div>";
+
+                            echo "<div class='input-container ic2'>";
+                            echo "<input id='username' name='username' class='input' type='text' placeholder=' ' value=" . $row['username'] . " required/>";
+                            echo "<div class='cut'></div>";
+                            echo "<label for='username' class='placeholder'>username</label>";
+                            echo "</div>";
+    
 
                             echo "<div class='input-container ic2'>";
                             echo "<input id='mobie' name='mob' class='input' type='text' placeholder=' ' required pattern='^\+?\d{0,11}'  value=" . $row['mob'] . " required/>";

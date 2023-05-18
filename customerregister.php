@@ -25,13 +25,6 @@ if (isset($_POST['submit'])) {
     $age = $_POST['F_age'];
     $gender = $_POST['F_gender'];
 
-    // checking required fields
-    $req_fields = array('F_fname', 'F_lname', 'F_mobile', 'F_username', 'F_address', 'F_email', 'F_age', 'F_gender');
-    $errors = array_merge($errors, check_req_fields($req_fields));
-
-    // checking max length
-    $max_len_fields = array('F_fname' => 15, 'F_lname' => 15, 'f_suername' => 20, 'F_mobile' => 11, 'F_address' => 50, 'F_email' => 50, 'F_age' => 11, 'F_gender' => 6);
-    $errors = array_merge($errors, check_max_len($max_len_fields));
 
     // checking email address
     if (!is_email($_POST['F_email'])) {
@@ -101,21 +94,21 @@ if (isset($_POST['submit'])) {
             <h1>Register Yourself
             </h1>
             <br>
-            <input type="text" name="F_fname" <?php echo 'value="' . $fname . '"'; ?> placeholder="First Name" required>
+            <input type="text" name="F_fname" maxlength="15"<?php echo 'value="' . $fname . '"'; ?> placeholder="First Name" required>
 
-            <input type="text" name="F_lname" <?php echo 'value="' . $lname . '"'; ?> placeholder="Last Name" required>
+            <input type="text" name="F_lname"maxlength="15" <?php echo 'value="' . $lname . '"'; ?> placeholder="Last Name" required>
 
-            <input type="text" name="F_username"" 
+            <input type="text" name="F_username" maxlength="20" 
                 <?php echo 'value="' . $username . '"'; ?> 
                 placeholder=" Username" required>
 
-            <input type="text" name="F_mobile" <?php echo 'value="' . $mobile . '"'; ?> placeholder="Mobile Number" required pattern='^\+?\d{0,11}'>
+            <input type="text" name="F_mobile" maxlength="11" <?php echo 'value="' . $mobile . '"'; ?> placeholder="Mobile Number" required pattern='^\+?\d{0,11}'>
 
-            <input type="text" name="F_address" <?php echo 'value="' . $address . '"'; ?> placeholder="Address" required>
+            <input type="text" name="F_address" maxlength="50" <?php echo 'value="' . $address . '"'; ?> placeholder="Address" required>
 
-            <input type="email" name="F_email" <?php echo 'value="' . $email . '"'; ?> placeholder="Email" required>
+            <input type="email" name="F_email" maxlength="50" <?php echo 'value="' . $email . '"'; ?> placeholder="Email" required>
 
-            <input type="number" name="F_age" <?php echo 'value="' . $age . '"'; ?> placeholder="Age" required>
+            <input type="number" name="F_age" maxlength="11" <?php echo 'value="' . $age . '"'; ?> placeholder="Age" required>
             <br>
             <div class="radio">
                 <div class="row radio-button">
