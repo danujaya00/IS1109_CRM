@@ -1,167 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Exo:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
 
-
 body {
-    background-color: #1A1D25;
-      height: 160vh;
-      margin: 0px 0 10px;
-    
-  
-  }
+  height: 160vh;
+  margin: 0px 0 10px;
+}
 
-.wel-msg{
-  
-    position: absolute;
-    left: 150px;
-    top: 30px;
-    
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 52px;
-    line-height: 77px;
-    
-    
-    color: #FFFFFF;
-    }
+.wel-msg {
+  position: absolute;
+  left: 150px;
+  top: 30px;
 
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 52px;
+  line-height: 77px;
 
-    /*  log-out button */
+  color: #ffffff;
+}
 
+/*  log-out button */
 
 .log_out-button {
-    appearance: none;
-    background-color: #FF4136;
-    border: 0px solid #1A1A1A;
-    border-radius: 10px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Exo', sans-serif;
-    font-size: 16px;
-    width: 120px;
-height: 55px;
-    outline: none;
-    text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    will-change: transform;
-  
-    position: absolute;
-    left: 90%;
-    top: 60px; 
-  }
-  
-  .log_out-button:disabled {
-    pointer-events: none;
-  }
-  
-  .log_out-button:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
-  
-  .log_out-button:active {
-    box-shadow: none;
-    transform: translateY(0);
-  }
-
-
-  /*  update button */
-
-.update-button {
-    appearance: none;
-    background-color: #0359FF;
-    border: 0px solid #1A1A1A;
-    border-radius: 10px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Exo', sans-serif;
-    font-size: 18px;
-    width: 250px;
-    height: 60px;
-    outline: none;
-    text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    will-change: transform;
-
-    position: absolute;
-    left:0%;
-    
-    margin-top: 130px;
-    
-    
-  }
-  
-  .update-button:disabled {
-    pointer-events: none;
-  }
-  
-  .update-button:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
-  
-  .update-button:active {
-    box-shadow: none;
-    transform: translateY(0);
-  }
-  
-  /* line for from tite */
-
-  .line-dec{
-    width: 250px;
-    position: relative;
-    left: 150px;
-    top: 150px;
-    border: 3px solid #03DAC5;
-  }
-
-  .line-dec2{
-    
-      width: 150px;
-      position: relative;
-      right:130px;
-      top:10px;
-      border: 3px solid #08d;
-   
-  
-  }
-
-
-   /*  update button admin */
-
-.update-button-admin {
   appearance: none;
-  background-color: #0359FF;
-  border: 0px solid #1A1A1A;
+  background-color: #ff4136;
+  border: 0px solid #1a1a1a;
   border-radius: 10px;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
-  font-family: 'Exo', sans-serif;
-  font-size: 18px;
-  width: 250px;
-  height: 60px;
+  font-family: "Exo", sans-serif;
+  font-size: 16px;
+  width: 120px;
+  height: 55px;
   outline: none;
   text-align: center;
   text-decoration: none;
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -169,11 +47,116 @@ height: 55px;
   will-change: transform;
 
   position: absolute;
-  left:0%;
-  
+  left: 90%;
+  top: 60px;
+}
+
+.log_out-button:disabled {
+  pointer-events: none;
+}
+
+.log_out-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.log_out-button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+/*  update button */
+
+.update-button {
+  appearance: none;
+  background-color: #0359ff;
+  border: 0px solid #1a1a1a;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Exo", sans-serif;
+  font-size: 18px;
+  width: 250px;
+  height: 60px;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  will-change: transform;
+
+  position: absolute;
+  left: 0%;
+
+  margin-top: 130px;
+}
+
+.update-button:disabled {
+  pointer-events: none;
+}
+
+.update-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.update-button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+/* line for from tite */
+
+.line-dec {
+  width: 250px;
+  position: relative;
+  left: 150px;
+  top: 150px;
+  border: 3px solid #03dac5;
+}
+
+.line-dec2 {
+  width: 150px;
+  position: relative;
+  right: 130px;
+  top: 10px;
+  border: 3px solid #08d;
+}
+
+/*  update button admin */
+
+.update-button-admin {
+  appearance: none;
+  background-color: #0359ff;
+  border: 0px solid #1a1a1a;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Exo", sans-serif;
+  font-size: 18px;
+  width: 250px;
+  height: 60px;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  will-change: transform;
+
+  position: absolute;
+  left: 0%;
+
   margin-top: 50px;
-  
-  
 }
 
 .update-button-admin:disabled {
@@ -192,35 +175,32 @@ height: 55px;
 
 /* line for from tite */
 
-.line-dec{
+.line-dec {
   width: 250px;
   position: relative;
   left: 150px;
   top: 150px;
-  border: 3px solid #03DAC5;
+  border: 3px solid #03dac5;
 }
 
-.line-dec2{
-  
-    width: 150px;
-    position: relative;
-    right:130px;
-    top:10px;
-    border: 3px solid #08d;
- 
-
+.line-dec2 {
+  width: 150px;
+  position: relative;
+  right: 130px;
+  top: 10px;
+  border: 3px solid #08d;
 }
 
 /* table input box */
 
 .title {
   color: #eee;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 36px;
   font-weight: 600;
   margin-top: 30px;
   position: relative;
-  right:130px;
+  right: 130px;
 }
 
 .subtitle {
@@ -246,7 +226,7 @@ height: 55px;
 }
 
 .input {
-  background-color: #11264C;
+  background-color: #11264c;
 
   border-radius: 12px;
   border: 0;
@@ -260,7 +240,7 @@ height: 55px;
 }
 /* cut is small popup box */
 .cut {
-  background-color: #01092D;
+  background-color: #01092d;
   border-radius: 10px;
   height: 20px;
   left: 20px;
@@ -273,13 +253,12 @@ height: 55px;
 }
 
 .cut-short {
-  width:55px;
+  width: 55px;
   /*width 50px default */
 }
 
 .cut-long {
-  width:80px;
-  
+  width: 80px;
 }
 
 .input:focus ~ .cut,
@@ -311,35 +290,30 @@ height: 55px;
 .input:focus ~ .placeholder {
   color: #dc2f55;
 }
- 
-  
-
-
 
 /*selet */
 
-select{
-    margin-top: 35px;
-    text-align: center;
-    background-color: #11264C;
-    font-family: 'inter', sans-serif;
-    font-size: 18px;
-    color:white;
-    width:250px;
-    height:49px;
-    border:0;
-    outline:0;
-    border-radius: 12px;
+select {
+  margin-top: 35px;
+  text-align: center;
+  background-color: #11264c;
+  font-family: "inter", sans-serif;
+  font-size: 18px;
+  color: white;
+  width: 250px;
+  height: 49px;
+  border: 0;
+  outline: 0;
+  border-radius: 12px;
 }
 
 /* form box */
 
-
 .container {
-  background-color: #01092D;
+  background-color: #01092d;
   border-radius: 10px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  
+
   overflow: hidden;
   width: 768px;
   max-width: 100%;
@@ -349,24 +323,21 @@ select{
   position: absolute;
   top: 20%;
   left: 33%;
- 
-  
 }
 
 .form-container {
   position: absolute;
   top: 50px;
-  left:33%;
- 
+  left: 33%;
 }
 
 /*admin*/
 
 .container-admin {
-  background-color: #01092D;
+  background-color: #01092d;
   border-radius: 10px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  
+
   overflow: hidden;
   width: 768px;
   max-width: 100%;
@@ -376,161 +347,150 @@ select{
   position: absolute;
   top: 30%;
   left: 30%;
- 
-  
 }
 
 .form-container-admin {
   position: absolute;
   top: 50px;
-  left:33%;
- 
+  left: 33%;
 }
 
-
-.navigation{
-  color:white;
+.navigation {
+  color: white;
   size: 20px;
   position: relative;
-  right:210px;
+  right: 210px;
 }
 
 /*Menu*/
 
-.menu{
-  
+.menu {
   position: -webkit-sticky;
   position: sticky;
   width: 250px;
-  height:742px;
+  height: 742px;
   left: 0px;
   top: 0px;
-  
-  background: #1A1D25;
+
+  background: #1a1d25;
   box-shadow: 0px 4px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
-z-index:4;
+  z-index: 4;
 
-/*width: 275px;
+  /*width: 275px;
 ackground: linear-gradient(180deg, #8500B4 20.83%, #332940 20.84%);
 height: 350px;*/
 }
 
-.menu-admin{
-  
+.menu-admin {
   position: -webkit-sticky;
   position: sticky;
   width: 250px;
-  height:760px;
+  height: 760px;
   left: 0px;
   top: 0px;
-  
-  background: #1A1D25;
+
+  background: #1a1d25;
   box-shadow: 0px 4px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
-z-index:4;
+  z-index: 4;
 
-/*width: 275px;
+  /*width: 275px;
 ackground: linear-gradient(180deg, #8500B4 20.83%, #332940 20.84%);
 height: 350px;*/
 }
 
-.piza-logo{
+.piza-logo {
   height: auto;
   width: 80px;
 }
 
-
-
-.piza-staff{
-  position: absolute;
-width: 200px;
-height: 82px;
-left: 23px;
-top: 50px;
-
-background: #0F151C;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 17px;
-}
-
-.menu-text{
-  font-family: "Montserrat", sans-serif;
-  font-size:36px;
-  position:relative;
-  bottom:40px;
-}
-
-.sub-line{
-    border: 3px solid #03DAC5;
-    width:80px;
-    position: absolute;
-    left: 405px;
-  top: 250px;
-  
-}
-
-
-.menu-line{
-  border: 1px solid #8C8C8C;
-  width:245px;
-  position: relative;
-  top:175px;
-
-}
-
-/* pro -view button + content */
-.pro-view{
+.piza-staff {
   position: absolute;
   width: 200px;
-height: 82px;
+  height: 82px;
   left: 23px;
-  top: 200px;
-  outline:0;
-  border:0;
+  top: 50px;
 
-  background: #0F151C;
+  background: #0f151c;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 17px;
 }
 
-.pro-avatar{
+.menu-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  position: relative;
+  bottom: 40px;
+}
+
+.sub-line {
+  border: 3px solid #03dac5;
+  width: 80px;
+  position: absolute;
+  left: 405px;
+  top: 250px;
+}
+
+.menu-line {
+  border: 1px solid #8c8c8c;
+  width: 245px;
+  position: relative;
+  top: 175px;
+}
+
+/* pro -view button + content */
+.pro-view {
+  position: absolute;
+  width: 200px;
+  height: 82px;
+  left: 23px;
+  top: 200px;
+  outline: 0;
+  border: 0;
+
+  background: #0f151c;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 17px;
+}
+
+.pro-avatar {
   height: auto;
   width: 50px;
   position: relative;
-  left:-10px;
-  top:5px;
+  left: -10px;
+  top: 5px;
 }
 
-.pro-text{
+.pro-text {
   font-family: "Montserrat", sans-serif;
-  font-size:23px;
-  position:relative;
-  bottom:12px;
-  left:5px;
-  color:white;
-  cursor:default;
+  font-size: 23px;
+  position: relative;
+  bottom: 12px;
+  left: 5px;
+  color: white;
+  cursor: default;
 }
 
-.active, .pro-view:hover {
+.active,
+.pro-view:hover {
   background-color: #121124;
   transform: translateY(-2px);
 }
 
-.pro-view:after{
-  content: '\2B9F'; /*unicode for arrowdown*/
+.pro-view:after {
+  content: "\2B9F"; /*unicode for arrowdown*/
   color: white;
   font-weight: bold;
   float: right;
   margin-left: 5px;
   position: relative;
-  top:20px;
-  right:10px;
- 
+  top: 20px;
+  right: 10px;
 }
 
-.pro-view:active{
-  transform: translateY(0); 
+.pro-view:active {
+  transform: translateY(0);
 }
 
 .pro-view:disabled {
@@ -538,14 +498,13 @@ height: 82px;
 }
 
 .active:after {
-  content: "\2B9D";/* unicode for arrowup*/
- 
+  content: "\2B9D"; /* unicode for arrowup*/
 }
 
 .content {
-  font-family: 'Inter';
-  font-size:2.0vh;
-  color:white;
+  font-family: "Inter";
+  font-size: 2vh;
+  color: white;
   border-radius: 17px;
   padding: 0 18px;
   width: 250px;
@@ -554,23 +513,23 @@ height: 82px;
   transition: max-height 0.2s ease-out;
   background-color: #121124;
   position: relative;
-  top:284px;
-  left:0px;
-  z-index:1;
+  top: 284px;
+  left: 0px;
+  z-index: 1;
 }
 
 /*Menu sales button*/
 
-.sales-but{
+.sales-but {
   position: absolute;
   width: 200px;
   height: 82px;
   left: 23px;
   top: 410px;
-  outline:0;
-  border:0;
+  outline: 0;
+  border: 0;
 
-  background: #0F151C;
+  background: #0f151c;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 17px;
 }
@@ -590,37 +549,36 @@ height: 82px;
   transform: translateY(0);
 }
 
-
-.sales-logo{
+.sales-logo {
   height: auto;
   width: 90px;
   position: relative;
-  left:-28px;
-  top:1px;
+  left: -28px;
+  top: 1px;
 }
 
-.sales-text{
+.sales-text {
   font-family: "Montserrat", sans-serif;
-  font-size:23px;
-  position:relative;
-  bottom:20px;
-  left:-35px;
-  color:white;
-  cursor:default;
+  font-size: 23px;
+  position: relative;
+  bottom: 20px;
+  left: -35px;
+  color: white;
+  cursor: default;
 }
 
 /*Menu add button*/
 
-.add-but{
+.add-but {
   position: absolute;
   width: 200px;
   height: 82px;
   left: 23px;
   top: 515px;
-  outline:0;
-  border:0;
+  outline: 0;
+  border: 0;
 
-  background: #0F151C;
+  background: #0f151c;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 17px;
 }
@@ -640,38 +598,36 @@ height: 82px;
   transform: translateY(0);
 }
 
-
-.add-logo{
+.add-logo {
   height: auto;
   width: 70px;
   position: relative;
-  left:-28px;
-  top:1px;
+  left: -28px;
+  top: 1px;
 }
 
-.add-text{
+.add-text {
   font-family: "Montserrat", sans-serif;
-  font-size:23px;
-  position:relative;
-  bottom:20px;
-  left:-25px;
-  color:white;
-  cursor:default;
+  font-size: 23px;
+  position: relative;
+  bottom: 20px;
+  left: -25px;
+  color: white;
+  cursor: default;
 }
-
 
 /*Customer menu button*/
 
-.cus-but{
+.cus-but {
   position: absolute;
   width: 200px;
   height: 82px;
   left: 23px;
   top: 305px;
-  outline:0;
-  border:0;
+  outline: 0;
+  border: 0;
 
-  background: #0F151C;
+  background: #0f151c;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 17px;
 }
@@ -691,38 +647,36 @@ height: 82px;
   transform: translateY(0);
 }
 
-
-.cus-logo{
+.cus-logo {
   height: auto;
   width: 55px;
   position: relative;
-  left:0px;
-  top:0px;
+  left: 0px;
+  top: 0px;
 }
 
-.cus-text{
+.cus-text {
   font-family: "Montserrat", sans-serif;
-  font-size:23px;
-  position:relative;
-  bottom:16px;
-  left:-0px;
-  color:white;
-  cursor:default;
+  font-size: 23px;
+  position: relative;
+  bottom: 16px;
+  left: -0px;
+  color: white;
+  cursor: default;
 }
-
 
 /*Menu staff button*/
 
-.staff-but{
+.staff-but {
   position: absolute;
   width: 200px;
   height: 82px;
   left: 23px;
   top: 305px;
-  outline:0;
-  border:0;
+  outline: 0;
+  border: 0;
 
-  background: #0F151C;
+  background: #0f151c;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 17px;
 }
@@ -742,21 +696,20 @@ height: 82px;
   transform: translateY(0);
 }
 
-
-.staff-logo{
+.staff-logo {
   height: auto;
   width: 60px;
   position: relative;
-  left:-28px;
-  top:1px;
+  left: -28px;
+  top: 1px;
 }
 
-.staff-text{
+.staff-text {
   font-family: "Montserrat", sans-serif;
-  font-size:23px;
-  position:relative;
-  bottom:20px;
-  left:-25px;
-  color:white;
-  cursor:default;
+  font-size: 23px;
+  position: relative;
+  bottom: 20px;
+  left: -25px;
+  color: white;
+  cursor: default;
 }

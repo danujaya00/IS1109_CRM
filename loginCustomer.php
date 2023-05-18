@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
             verify_query($result_set);
 
             // redirect to admin.php
-            header('Location: custViewUserDetails.php');
+            header('Location: customerview.php');
         } else {
             $errors[] = 'Invalid Username / MobileNo';
         }

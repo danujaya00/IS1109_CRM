@@ -59,10 +59,10 @@ if (isset($_POST['submit'])) {
 
         if ($result) {
             echo "<script>alert('Customer Registered Successfully');</script>";
-            echo "<script>window.location='./customerLogin.php' </script>";
+            echo "<script>window.location='./loginCustomer.php' </script>";
         } else {
             echo "<script>alert('registration failed');</script>";
-            echo "<script>window.location='./customerLogin.php'</script>";;
+            echo "<script>window.location='./loginCustomer.php'</script>";;
         }
     }
 }
@@ -128,7 +128,7 @@ if (isset($_POST['submit'])) {
 
             <div class="foot-text" style="background-color:white">
                 <h3>Already Registered? <br>
-                    <span><a href="./Login/logincustomer.php">Login now</a></span>    
+                    <span><a href="./loginCustomer.php">Login now</a></span>    
                 </h3>
             </div>
         </form>

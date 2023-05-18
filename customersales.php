@@ -26,9 +26,9 @@ $row_user = mysqli_fetch_assoc($result_user);
 
 #$username='Sales_manager_name'; # for test
 
-$sql = "SELECT * FROM crm_customer where customer_id = $id";
-mysqli_query($connection, $sql);
-$result = mysqli_query($connection, $sql);
+$sql2 = "SELECT d.Sales_ID as s_id , d.Product_ID as p_id, d.Purchased_date as pd, p.Product_Name as item, p.Price_per_unit as price  FROM sales_details as d , crm_product as p  where d.Product_ID = p.Product_ID and d.customer_id = $id";
+mysqli_query($connection, $sql2);
+$result = mysqli_query($connection, $sql2);
 
 if ($result) {
     //echo "Sucessfull";
@@ -40,8 +40,25 @@ if ($result) {
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="./styles/customer/new.css" rel="stylesheet">
+    <link href="./styles/customer/customerstyles.css" rel="stylesheet">
     <title>Customer View</title>
+    <style>
+        th {
+            background-color: black;
+        height: 55px;
+        }
+        td {
+        height: 45px;
+        }
+        tr {
+        width: 80%;
+        }
+        table{
+         margin-left: 10%;
+         margin-top: 5%;
+         margin-bottom: 5%;
+        }
+        </style>
 </head>
 
 <body>
@@ -62,13 +79,13 @@ if ($result) {
                     Email : <br> <?php echo " " . $row_user['email'] . " "; ?><br><br>
             </div>
             <!--pro view over -->
-            <a href='./customerViewSales.php'>
+            <a href='./customerView.php'>
                 <button class="menu-button">
                     <img class="details-logo" src="./assets/img/mydetails.png">
                     <span class="menu-button-text">My Details</span>
                 </button>
             </a>
-            <a href='./customerViewSales.php'>
+            <a href='./customersales.php'>
                 <button class="menu-button">
                     <img class="sales-logo" src="./assets/img/sales.png">
                     <span class="menu-button-text">Purchses</span>
@@ -90,57 +107,36 @@ if ($result) {
         <!-- user view table -->
 
         <div class="details-container">
-            <h1 class=" ">Your Details</h1>
-            <hr>
-            <table class=" flex-centered user-details">
-                <?php
-                $row = mysqli_fetch_assoc($result);
-                echo "
-                <tr>
-                    <td class='item'> Customer Id</td>
-                    <td class='colon'> : </td>
-                    <td class='value'>" . $row['customer_id'] . "</td>
-                </tr>
-                <tr>
-                    <td class='item'> First Name</td>
-                    <td class='colon'> : </td>
-                    <td class='value'>" . $row['fname'] . "</td>
-                </tr>
-                <tr>
-                    <td class='item'> Last Name</td>
-                    <td class='colon'> : </td>
-                    <td class='value'>" . $row['lname'] . "</td>
-                </tr>
-                <tr>
-                    <td class='item'> Mobile</td>
-                    <td class='colon'> : </td>
-                    <td class='value'>" . $row['mob'] . "</td>
-                </tr>
-                <tr>
-                    <td class='item'> Address</td>
-                    <td class='colon'> : </td>
-                    <td class='value'>" . $row['address'] . "</td>
-                </tr>
-                <tr>
-                    <td class='item'> Email</td>
-                    <td class='colon'> : </td>
-                    <td class='value'>" . $row['email'] . "</td>
-                </tr>
-                <tr>
-                    <td class='item'> Age</td>
-                    <td class='colon'> : </td>
-                    <td class='value'>" . $row['age'] . "</td>
-                </tr>
-                <tr>
-                    <td class='item'> Gender</td>
-                    <td class='colon'> : </td>
-                    <td class='value'>" . $row['gender'] . "</td>
-                    
-                 </tr>
-                <tr> <td colspan='3'><a href='./phpFunc/functions/customer/update.php?customer_id=" . $row['customer_id'] . "'><button class='edit-button' role='button'>Edit</button> </a></td> </tr>   ";
+            <!-- user view table -->
 
+            <table border="0" class="table_dec">
+
+                <tr bgcolor="#404040">
+
+                    <th>Invoice ID</th>
+                    <th>Product ID</th>
+                    <th>Date</th>
+                    <th>Item Name</th>
+                    <th>Price</th>
+
+                </tr>
+                </tr>
+                <?php
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo "
+        <tr bgcolor='#373737' height='35px'>
+            <td>" . $row['s_id'] . "</td>
+            <td>" . $row['p_id'] . "</td>
+            <td>" . $row['pd'] . "</td>
+            <td>" . $row['item'] . "</td>
+            <td>" . $row['price'] . "</td>
+        </tr>";
+                }
                 ?>
+
             </table>
+
+            <!-- user view table over -->
         </div>
     </div>
     <!-- script for get the modal -->
