@@ -3,12 +3,12 @@
 
 
 body {
-    background-color: #27262C;
+    background-image: url('../../assets/img/pizza_background.png');
       height: 160vh;
     
   
   }
-
+/* 
 .wel-msg{
   
     position: absolute;
@@ -23,60 +23,53 @@ body {
     
     
     color: #FFFFFF;
-    }
+    } */
 
 
     /*  log-out button */
 
 
-.log_out-button {
-    appearance: none;
-    background-color: #8500B4;
-    border: 0px solid #1A1A1A;
-    border-radius: 10px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Exo', sans-serif;
-    font-size: 16px;
-    width: 100px;
-  height: 55px;
-    outline: none;
-    text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    will-change: transform;
+
+    .log_out-button {
   
-    position: absolute;
-    left: 90%;
-    top: 60px; 
-  }
-  
-  .log_out-button:disabled {
-    pointer-events: none;
-  }
-  
-  .log_out-button:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
-  
-  .log_out-button:active {
-    box-shadow: none;
-    transform: translateY(0);
-  }
+      background-color: #b40000;
+      border: 0px solid #ffffff;
+      border-radius: 10px;
+      box-sizing: border-box;
+      color: #ffffff;
+      cursor: pointer;
+      display: flex;
+      font-family: "roboto";
+      font-size: 20px;
+      width: 100px;
+      height: 40px;
+      outline: none;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+      align-items: center;
+      justify-content: center;
+      margin-left: 85%;
+      margin-top: 2%;
+      position: relative;
+      
+    }
+    .log_out-button:hover {
+      background-color: #750101;
+      border: 0px solid #ffffff;
+    }
+    .no-deco {
+      text-decoration: none;
+    }
 
 
   /*  Edit button */
 
 .edit-button {
+  
     appearance: none;
-    background-color: #0359FF;
+    background-color: rgb(195, 127, 0);
     border: 0px solid #1A1A1A;
     border-radius: 10px;
     box-sizing: border-box;
@@ -84,9 +77,9 @@ body {
     cursor: pointer;
     display: inline-block;
     font-family: 'Exo', sans-serif;
-    font-size: 18px;
-    width: 250px;
-    height: 60px;
+    font-size: 15px;
+    width: 100px;
+    height: 30px;
     outline: none;
     text-align: center;
     text-decoration: none;
@@ -100,27 +93,16 @@ body {
     position: absolute;
     left:0%;
     
-    margin-top: 130px;
+    margin-top: 70px;
     
   }
   
-  .edit-button:disabled {
-    pointer-events: none;
-  }
   
   .edit-button:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
   }
   
-  .edit-button:active {
-    box-shadow: none;
-    transform: translateY(0);
-  }
-
-
-
-
   /*  back button */
 
   .back-button {
@@ -133,9 +115,9 @@ body {
     cursor: pointer;
     display: inline-block;
     font-family: 'Exo', sans-serif;
-    font-size: 16px;
-    width: 150px;
-    height: 60px;
+    font-size: 12px;
+    width: 0px;
+    height: 30px;
     outline: none;
     text-align: center;
     text-decoration: none;
@@ -148,7 +130,7 @@ body {
 
     position: relative;
     left:45%;
-    top:350px;
+    top:3px;
     
   }
   
@@ -167,33 +149,13 @@ body {
   }
 
 
-  /* line for from tite */
-
-  .line-dec{
-    width: 250px;
-    position: relative;
-    left: 150px;
-    top: 150px;
-    border: 3px solid #03DAC5;
-  }
-
-  .line-dec2{
-    
-      width: 150px;
-      position: relative;
-      right:130px;
-      top:10px;
-      border: 3px solid #08d;
-   
-  
-  }
 
 /* table input box */
 
 .title {
   color: #eee;
   font-family: 'Inter', sans-serif;
-  font-size: 36px;
+  font-size: 25px;
   font-weight: 600;
   margin-top: 30px;
   position: relative;
@@ -203,19 +165,19 @@ body {
 .subtitle {
   color: #eee;
   font-family: sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 600;
   margin-top: 10px;
 }
 
 .input-container {
-  height: 50px;
+  height: 30px;
   position: relative;
   width: 100%;
 }
 
 .ic1 {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .ic2 {
@@ -229,7 +191,7 @@ body {
   border: 0;
   box-sizing: border-box;
   color: #eee;
-  font-size: 18px;
+  font-size: 14px;
   height: 100%;
   outline: 0;
   padding: 4px 20px 0;
@@ -296,14 +258,14 @@ body {
 /*selet */
 
 select{
-    margin-top: 40px;
+    margin-top: 20px;
     text-align: center;
     background-color: #11264C;
     font-family: 'inter', sans-serif;
-    font-size: 18px;
+    font-size: 14px;
     color:white;
     width:250px;
-    height:49px;
+    height:30px;
     border:0;
     outline:0;
     border-radius: 12px;

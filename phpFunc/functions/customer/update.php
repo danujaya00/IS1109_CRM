@@ -78,7 +78,7 @@ if(isset($_POST['update'])){
 <div class="form-container">
     
 <form action="update.php" method="post">
-<a href="../../../custViewUserDetails.php"><i class="fa-solid fa-arrow-left fa-3x navigation"></i></a>
+<a href="../../../customerview.php"><i class="fa-solid fa-arrow-left fa-2x navigation"></i></a>
 <div class="title">Update Customer</div><div class="line-dec2"></div><br>
 <?php
 
