@@ -49,11 +49,11 @@
     <br>
     <center style="font-size:30px;">FAQ:</center> <br>
 
-    <a href="#">1. How to Log in ?</a> <br><br>
-    <a href="#">2. How to Know your First name and the registered email ?</a> <br><br>
-    <a href="#">3. How to Know more about your purchases ?</a> <br><br>
-    <a href="#">4. How to Know more about your profile ?</a> <br><br>
-    <a href="#">5. How to Update your profile details ?</a> <br><br>
+    1. How to Log in ? <br><br>
+    2. How to Know your First name and the registered email ? <br><br>
+    3. How to Know more about your purchases ? <br><br>
+    4. How to Know more about your profile ? <br><br>
+    5. How to Update your profile details ? <br><br>
 
   </div>
 

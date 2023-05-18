@@ -48,12 +48,12 @@
             <br>
             <center style="font-size:30px;">FAQ:</center> <br>
 
-            <a href="#">1. How to Log in ?</a> <br><br>
-            <a href="#">2. How to Navigate through your profile details ?</a> <br><br>
-            <a href="#">3. How to Know more about your customers ?</a> <br><br>
-            <a href="#">4. How to Update Customer details ?</a> <br><br>
-            <a href="#">5. How to View sales details ?</a> <br><br>
-            <a href="#">6. How to Add a customer ?</a> <br><br>
+            1. How to Log in ? <br><br>
+            2. How to Navigate through your profile details ? <br><br>
+            3. How to Know more about your customers ? <br><br>
+            4. How to Update Customer details ? <br><br>
+            5. How to View sales details ? <br><br>
+            6. How to Add a customer ? <br><br>
 
       </div>
 
