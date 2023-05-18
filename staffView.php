@@ -370,7 +370,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                 <button class='edit-button' onclick=\"if(confirm('Warning!\\n \\n &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Are you sure you want to delete this customer:&nbsp;".$row['fname']."')) {
               window.location='./phpFunc/functions/businessUser/delete.php?customer_id=".$row['customer_id']."';
           } else {
-              window.location='./salesView.php';
+              
           }\">Delete</button>
             &nbsp;</td>
         </tr>";
