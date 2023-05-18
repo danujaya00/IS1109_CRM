@@ -367,10 +367,10 @@ while ($row = mysqli_fetch_assoc($result)) {
             <td>" . $row['gender'] . "</td>
             <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href='./phpFunc/functions/businessUser/update.php?customer_id=".$row['customer_id']."'><button class='edit-button' role='button'>Edit</button> </a>&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td>&nbsp;
-                <button class='edit-button' onclick=\"if(confirm('Warning!\\n  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Are you sure you want to delete this customer:&nbsp;".$row['fname']."')) {
+                <button class='edit-button' onclick=\"if(confirm('Warning!\\n \\n &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Are you sure you want to delete this customer:&nbsp;".$row['fname']."')) {
               window.location='./phpFunc/functions/businessUser/delete.php?customer_id=".$row['customer_id']."';
           } else {
-              //window.location='./staffView.php';
+              window.location='./salesView.php';
           }\">Delete</button>
             &nbsp;</td>
         </tr>";

@@ -161,10 +161,10 @@ while ($row = mysqli_fetch_assoc($result)) {
             <td>&nbsp;&nbsp;&nbsp;&nbsp;
             
            
-          <button class='edit-button' onclick=\"if(confirm('Warning!\\n  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Are you sure you want to delete this user:&nbsp;".$row['name']."')) {
+          <button class='edit-button' onclick=\"if(confirm('Warning!\\n \\n &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Are you sure you want to delete this user:&nbsp;".$row['name']."')) {
               window.location='./phpFunc/functions/admin/delete.php?user_id=".$row['id']."';
           } else {
-             // window.location='./admin.php';
+              window.location='./admin.php';
           }\">Delete</button>
 
 
