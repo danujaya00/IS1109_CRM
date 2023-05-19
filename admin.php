@@ -1,6 +1,5 @@
 <?php session_start(); ?>
 <?php require_once('./phpFunc/connection/connect.php'); ?>
-<?php require_once('./phpFunc/functions/functions.php'); ?>
 
 <?php
 #login check
@@ -27,7 +26,6 @@ $result_user = mysqli_query($connection,$sql1);
 $row_user=mysqli_fetch_assoc($result_user);
 
 #get users data
-
 
 $sql = "SELECT * FROM crm_users ORDER BY id ASC";
 mysqli_query($connection, $sql);
@@ -162,7 +160,7 @@ while ($row = mysqli_fetch_assoc($result)) {
             
            
           <button class='edit-button' onclick=\"if(confirm('Warning!\\n \\n &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Are you sure you want to delete this user:&nbsp;".$row['name']."')) {
-              window.location='./phpFunc/functions/admin/delete.php?user_id=".$row['id']."';
+              window.location='./phpFunc/functions/admin/delete.php?user_id=".$row['id']."';  
           } else {
               window.location='./admin.php';
           }\">Delete</button>

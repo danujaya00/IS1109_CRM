@@ -10,7 +10,7 @@ if (!$_SESSION["name"]) {
 }
 
 
-
+    
 if (isset($_GET['customer_id'])) {
     $sql1 = "SELECT * FROM crm_customer WHERE customer_id =" . $_GET['customer_id'] . "";
     $result = mysqli_query($connection, $sql1);
@@ -33,10 +33,6 @@ if (isset($_POST['update'])) {
         echo "<script>window.location='../../../customerView.php'</script>";
     }
 }
-
-
-
-
 
 ?>
 

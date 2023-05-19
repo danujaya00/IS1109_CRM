@@ -1,6 +1,5 @@
 <?php session_start(); ?>
 <?php require_once('./phpFunc/connection/connect.php'); ?>
-<?php require_once('./phpFunc/functions/functions.php'); ?>
 
 <?php
 
@@ -34,7 +33,6 @@ if (isset($_POST['logIn'])) {
 
 		$result_set = mysqli_query($connection, $query);
 
-		verify_query($result_set);
 
 		if (mysqli_num_rows($result_set) == 1) {
 
@@ -49,8 +47,6 @@ if (isset($_POST['logIn'])) {
 			$query .= "WHERE id = {$_SESSION['id']} LIMIT 1";
 
 			$result_set = mysqli_query($connection, $query);
-
-			verify_query($result_set);
 
 			// redirect to admin.php and staffView.php
 			if ($_SESSION["roles"] == 'salesman') {
@@ -98,7 +94,7 @@ if (isset($_POST['logIn'])) {
 					echo '<p class="info">You have successfully logged out from the system</p>';
 				}
 				?>
-				<input type="text" name="username" placeholder="Email" required/>
+				<input type="email" name="username" placeholder="Email" required/>
 				<input type="password" name="password" placeholder="Password" required/>
 				<br>
 				<button type="submit" name="logIn">Log In</button>

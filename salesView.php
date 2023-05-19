@@ -137,7 +137,7 @@ if($result){
 
 <button class="up-but"  style="top:515px;"onclick="document.getElementById('updatePwd').style.display='block'"  >
 <img class="up-logo" src="./assets/img/pwd.png">
-<span class="up-text">Update User<br><span style="position:relative; left:23px;"> Details</span></span>  
+<span class="up-text">Update User<br><span style="position:relative; left:23px;"> Password</span></span>  
       
 
 </button>  

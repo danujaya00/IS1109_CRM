@@ -1,6 +1,5 @@
 <?php session_start(); ?>
 <?php require_once('./phpFunc/connection/connect.php'); ?>
-<?php require_once('./phpFunc/functions/functions.php'); ?>
 
 <?php
 
@@ -26,11 +25,6 @@ if (isset($_POST['submit'])) {
     $gender = $_POST['F_gender'];
 
 
-    // checking email address
-    if (!is_email($_POST['F_email'])) {
-        $errors[] = 'Email address is invalid.';
-    }
-
     if (empty($errors)) {
         // no errors found... adding new record
 
@@ -48,7 +42,6 @@ if (isset($_POST['submit'])) {
         $query = "INSERT INTO crm_customer ( fname, lname, username, mob, address, email, age, gender) VALUES('{$fname}', '{$lname}', '{$username}' , '{$mobile}', '{$address}', '{$email}', '{$age}', '{$gender}')";
 
         $result = mysqli_query($connection, $query);
-        verify_query($result);
 
         if ($result) {
             echo "<script>alert('Customer Registered Successfully');</script>";

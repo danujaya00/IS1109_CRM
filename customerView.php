@@ -24,7 +24,6 @@ $row_user = mysqli_fetch_assoc($result_user);
 
 
 
-#$username='Sales_manager_name'; # for test
 
 $sql = "SELECT * FROM crm_customer where customer_id = $id";
 mysqli_query($connection, $sql);
@@ -51,7 +50,7 @@ if ($result) {
             <span class="menu-text" style="color:orange;">PiZzA</span><br><span class="menu-sub-text">Customer</span>
         </div>
         <div class="menu-container">
-            <!-- pro view start -->
+            <!-- profile view start -->
             <button class="pro-view">
                 <img class="pro-avatar" src="./assets/img/pro_avatar.png">
                 <span class="pro-text">Profile </span>

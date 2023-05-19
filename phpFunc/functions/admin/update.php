@@ -184,7 +184,7 @@ echo "<label for='firstname' class='placeholder'>Name</label>";
 echo "</div>";
 
 echo "<div class='input-container ic2'>";
-echo "<input id='lastname' name='email' class='input' type='text' placeholder=' ' value=".$row['email']." required >";
+echo "<input id='lastname' name='email' class='input' type='email' placeholder=' ' value=".$row['email']." required >";
 echo "<div class='cut cut-short'></div>";
 echo "<label for='lastname' class='placeholder'>Email</label>";
 echo "</div>";
